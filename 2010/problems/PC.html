@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+<h2 class="probtitle">Problem C: 円周率</h2>
+
+<p>東京大学合格を目指す高校生のきたまさ君は東大入試の過去問で次のような問題を見つけた。</p>
+<p>「円周率が3.05より大きいことを証明せよ。」</p>
+<p>数学がとても得意なきたまさ君は、直径1の円に内接する正八角形の周囲の長さを求めればよいことに一瞬で気がついた。</p>
+<p>きたまさ君はプログラミングも得意なので、問題を一般化し、直径1の円に内接する正n角形の周囲の長さを求めるプログラムを書く事にした。
+</p>
+
+<h2>Input</h2>
+
+<p>入力は 1 行のみからなり、その行には 1 つの自然数 <i>n</i> が含まれる。 (3 &le; <i>n</i> &le; 100)
+</p>
+
+<h2>Output</h2>
+
+<p>直径1の円に内接する正<i>n</i>角形の周囲の長さを一行に出力せよ。
+出力する値は10<sup>-3</sup>以下の誤差を含んでいても構わない．値は小数点以下何桁表示しても構わない。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>8
+</pre>
+<h2>Output for Sample Input 1</h2>
+<pre>3.0615
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre>6
+</pre>
+<h2>Output for Sample Input 2</h2>
+<pre>3.0000
+</pre>
+
+<h2>Sample Code in C</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    int n;
+    scanf("%d", &amp;n);
+    printf("%.10f\n", n * sqrt(2 - 2 * cos(2 * M_PI / n)) / 2);
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in C++</h2>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;iomanip&gt;
+
+using namespace std;
+
+int main() {
+    int n;
+    cin &gt;&gt; n;
+    cout &lt;&lt; fixed &lt;&lt; setprecision(10) &lt;&lt; n * sqrt(2 - 2 * cos(2 * M_PI / n)) / 2 &lt;&lt; endl;
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in Java</h2>
+<pre>
+import java.util.*;
+import static java.lang.Math.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.printf("%.10f%n", n * sqrt(2 - 2 * cos(2 * PI / n)) / 2);
+    }
+
+}
+</pre>
+
+<hr>
+
+<address>
+Problemsetter: Yoichi Iwata
+</address>
+</body></html>

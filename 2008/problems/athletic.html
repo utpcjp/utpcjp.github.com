@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>Problem A: サイゾウ</title>
+    <style type="text/css">
+      <!--
+      h1 {
+        text-align: center;
+      }
+
+      .timelimit {
+        font-weight: bold;
+	text-align: right;
+      }
+
+      .figure {
+        text-align: center;
+      }
+
+      .figure table {
+        margin-left: auto;
+	margin-right: auto;
+      }
+
+      pre.sampleinput, pre.sampleoutput {
+	padding: 0.5em;
+        border: solid thin black;
+      }
+
+      .illust {
+        margin-left: 3em;
+	margin-right: 3em;
+      }
+      -->
+    </style>
+  </head>
+  <h1>Problem A: サイゾウ</h1>
+  <p class="timelimit">Time Limit: 3 sec</p>
+
+  <p>
+    ある国で「サイゾウ」というテレビ番組が流行している．
+    この番組は参加者がフィールドアスレチックに挑戦し，
+    見事攻略すれば賞金をもらえるというものである．
+  </p>
+
+  <p>
+    フィールドアスレチックは高さが異なるブロックを一列に並べて作られていて，
+    攻略のためにはいかにして段差を登り降りするかが重要になる
+    （図1）．
+    この番組に参加することになったあなたの友人は，
+    フィールドアスレチックの構造が与えられたときに，
+    登らなければならない最大の段差と降りなければならない最大の段差を
+    計算するプログラムを書いてほしいと，
+    凄腕プログラマーであるあなたに依頼してきた．
+  </p>
+
+  <div class="figure">
+    <table>
+      <tbody>
+	<tr>
+	  <td>
+	    <img src="img/athletic.1.png"
+		 alt="アスレチックの構造の例（入力例の最初のデータセット）．">
+	  </td>
+	</tr>
+	<tr>
+	  <td>図1: アスレチックの構造の例（入力例の最初のデータセット）．</td>
+	</tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Input</h2>
+  <p>
+    入力の1行目にはデータセットの個数 <var>t</var>
+    (0 &lt; <var>t</var> &le; 100) が与えられる．
+    この行に引き続き <var>t</var> 個のデータセットが与えられる．
+  </p>
+
+  <p>
+    データセットの1行目はフィールドアスレチックを構成している
+    ブロックの個数 <var>n</var>
+    (2 &le; <var>n</var> &le; 100) である．
+    2行目にはスタートからゴールまでのブロックの高さを示す整数が
+    順に <var>n</var> 個与えられる．
+    1番目がスタート， <var>n</var>番目がゴールに対応している．
+    これらの整数は1つの空白文字で区切られている．
+    各ブロックの高さ <var>h</var> は 0 &lt; <var>h</var> &le; 1000 を満たす．
+  </p>
+
+  <h2>Output</h2>
+  <p>
+    各データセットに対し，
+    登らなければならない最大の段差の大きさと，
+    降りなければならない最大の段差の大きさを，
+    1つの空白文字で区切って1行に出力せよ．
+    なお，登る段差がない，または降りる段差がない場合は，
+    対応する最大の段差の大きさは 0 とすること．
+  </p>
+
+  <h2>Sample Input</h2>
+  <pre class="sampleinput">5
+5
+10 70 30 50 90
+2
+20 100
+2
+100 30
+3
+50 50 50
+7
+123 45 678 901 234 567 890</pre>
+
+  <h2>Output for the Sample Input</h2>
+  <pre class="sampleoutput">60 40
+80 0
+0 70
+0 0
+633 667</pre>
+
+  <hr>
+  <address>
+    東京大学プログラミングコンテスト2008<br>
+    Problemsetter: Yoshitake Matsumoto
+  </address>
+</html>

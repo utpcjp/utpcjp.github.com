@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+<h2 class="probtitle">Problem A: コンパス</h2>
+
+<p>
+東京大学合格を目指す高校生のきたまさ君は、数学の授業を受けていた。
+</p>
+
+<p>
+授業は今、三角関数の説明を行っており、先生は黒板に綺麗な円を描いた。
+きたまさ君は几帳面なので、方眼紙とコンパスを用いて綺麗にノートを取ることにした。
+授業が終わって家に帰り、ノートを見ながら復習をしていたまじめなきたまさ君は、コンパスを用いて描いた円が、方眼紙の格子点上を何度も通っていることに気がついた。
+数学が大好きなきたまさ君は、円の半径と円周上の格子点数になにか関係があるのではないかと考え、プログラムを書いてその対応を調べることにした。
+</p>
+
+<h2>Input</h2>
+
+<p>
+入力は 1 行のみからなり、その行には 1 つの自然数 <i>r</i> が含まれる。 (1 &le; <i>r</i> &le; 1000)
+</p>
+
+<h2>Output</h2>
+
+<p>
+原点中心半径 <i>r</i> の円周上の格子点の個数を一行に出力せよ。
+</p>
+
+<h2>Sample Input 1</h2>
+
+<pre>
+1
+</pre>
+
+<h2>Output for Sample Input 1</h2>
+
+<pre>
+4
+</pre>
+
+
+<h2>Sample Input 2</h2>
+
+<pre>
+5
+</pre>
+
+<h2>Output for Sample Input 2</h2>
+
+<pre>
+12
+</pre>
+
+<h2>Sample Code in C</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int r, num = 0, x, y;
+    scanf("%d", &amp;r);
+    for (x = -r; x &lt;= r; x++) {
+        for (y = -r; y &lt;= r; y++) {
+            if (x * x + y * y == r * r) num++;
+        }
+    }
+    printf("%d\n", num);
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in C++</h2>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int r, num = 0;
+    cin &gt;&gt; r;
+    for (int x = -r; x &lt;= r; x++) {
+        for (int y = -r; y &lt;= r; y++) {
+            if (x * x + y * y == r * r) num++;
+        }
+    }
+    cout &lt;&lt; num &lt;&lt; endl;
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in Java</h2>
+<pre>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int r = sc.nextInt();
+        int num = 0;
+        for (int x = -r; x &lt;= r; x++) {
+            for (int y = -r; y &lt;= r; y++) {
+                if (x * x + y * y == r * r) num++;
+            }
+        }
+        System.out.println(num);
+    }
+
+}
+</pre>
+
+<h2>注意</h2>
+C、C++のソースコードでは最後にreturn 0; をしないとRuntimeErrorとなることがあるので注意せよ。<br>
+Javaのクラス名は"Main"でなければならず、またデフォルトパッケージを用いなければならないことに注意せよ。
+
+<hr>
+
+<address>
+Problemsetter: Yoichi Iwata
+</address>
+</body></html>

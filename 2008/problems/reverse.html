@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Problem Q: 合い言葉</title>
+  </head>
+  <body>
+    <h1>Problem Q: 合い言葉</h1>
+
+    <p>
+      あなたは，とあるマフィアを捜査している捜査官である．長年の追跡の結果，あなたはとうとうマフィアのアジトの場所をつきとめ，マフィアの連中を一網打尽にする絶好の機会を得た．この機会を逃すわけにはいかない．
+    </p>
+
+    <p>
+      アジトに進入するには，見張りの人間に対して合い言葉を言う必要がある．幸いにして，あなたは合い言葉に関する情報を既に手に入れていた： 見張りが言ってくる言葉をそのまま逆さにして答えればよいのだ．
+    </p>
+
+    <p>
+      あなたは万が一にも失敗できない．このミッションを確実に成功させるために，あなたは合い言葉を瞬時に言えるように合い言葉を生成するプログラムを準備することにした．
+    </p>
+
+    <h2>Input</h2>
+    <p>
+      入力は複数のデータセットからなる．入力の先頭にデータセット数を表す数 <var>N</var> のみを含む行が与えられ，以降の <var>N</var> 行にそれぞれのデータセットが与えられる．
+    </p>
+
+    <p>
+      それぞれのデータセットは1行の文字列からなっており，これはマフィアの見張りが言ってくる言葉を表している．見張りが言ってくる言葉は ASCII の表示可能な文字（アルファベット・数字・記号）のみからなっており，スペースやタブなどの空白文字や制御文字は含まれない．与えられる文字列は空でなく，またその長さは50文字を越えない．
+    </p>
+
+    <h2>Output</h2>
+    <p>
+      それぞれのデータセットに対して，見張りの言ってくる言葉に対応する合い言葉を1行で出力せよ．アルファベットの大文字と小文字は区別することに注意せよ．
+    </p>
+
+    <h2>Sample Input</h2>
+    <pre>3
+Welcome
+01234567890123456789012345678901234567890123456789
+--%-***!</pre>
+
+    <h2>Output for Sample Input</h2>
+    <pre>emocleW
+98765432109876543210987654321098765432109876543210
+!***-%--</pre>
+
+    <h2>解答例</h2>
+    <p>以下に C, C++, Java によるこの問題の解答例を示す．</p>
+
+    <h3>C</h3>
+    <pre>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(void)
+{
+    int cases, len, i, j;
+    char buf[51];
+
+    scanf("%d", &amp;cases);
+    for (i = 0; i &lt; cases; ++i) {
+        scanf("%s", buf);
+        len = strlen(buf);
+        for (j = len - 1; j &gt;= 0; --j) putchar(buf[j]);
+        puts("");
+    }
+    return 0;
+}</pre>
+
+    <h3>C++</h3>
+    <pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main()
+{
+    int cases;
+    cin &gt;&gt; cases;
+    for (int i = 0; i &lt; cases; ++i) {
+        string msg;
+        cin &gt;&gt; msg;
+        reverse(msg.begin(), msg.end());
+        cout &lt;&lt; msg &lt;&lt; '\n';
+    }
+    return 0;
+}</pre>
+
+    <h3>Java</h3>
+    <pre>import java.util.Scanner;
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int cases = sc.nextInt();
+        for (int i = 0; i &lt; cases; ++i) {
+            String msg = sc.next();
+            StringBuffer buf = new StringBuffer(msg);
+            buf.reverse();
+            System.out.println(buf);
+        }
+    }
+}</pre>
+
+    <hr>
+    <address>
+      東京大学プログラミングコンテスト 2008<br>
+      Problemsetter: Yuta Kitamura
+    </address>
+  </body>
+</html>

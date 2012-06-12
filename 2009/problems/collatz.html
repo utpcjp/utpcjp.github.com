@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+<h2>Problem A: コラッツ予想</h2>
+
+<p>自然数から新たな自然数を作る次のような関数 <var>f</var> を考える。</p>
+<ul>
+<li><var>n</var> が奇数のとき、<var>f(n) = 3n + 1</var></li>
+<li><var>n</var> が偶数のとき、<var>f(n) = n / 2</var></li>
+</ul>
+<p>1 以上の自然数 <var>m</var> に対して、<var>f<sup>t</sup>(m) = 1</var> となるような最小の非負整数 <var>t</var> を <var>t(m)</var> と書くことにする。<var>m</var> が与えられるので、<var>t(m)</var> を求めよ。</p>
+<p>ただし、<var>f<sup>t</sup>(m)</var> とは <var>m</var> に <var>f</var> を <var>t</var> 回適用したものを表す。</p>
+
+<h2>Input</h2>
+<p>入力は 1 行のみからなり、その行には 1 つの自然数 <var>m</var> が含まれる。</p>
+<p>1 &le; <var>m</var> &le; 10<sup>9</sup> であり、任意の非負整数 <var>k</var> に対して <var>f<sup>k</sup>(m)</var> &le; 10<sup>18</sup> であることが保証されている。
+</p>
+
+<h2>Output</h2>
+<p><var>t(m)</var> を 1 行に出力せよ。もし <var>f<sup>t</sup>(m) = 1</var> となるような <var>t</var> が存在しない場合、"Counterexample for Collatz conjecture!" と 1 行に出力せよ。</p>
+
+<h2>Sample Input</h2>
+<pre>42</pre>
+<pre>7</pre>
+<pre>1</pre>
+<pre>525858345</pre>
+<pre>670617279</pre>
+
+<h2>Output for the Sample Input</h2>
+<pre>8</pre>
+<pre>16</pre>
+<pre>0</pre>
+<pre>585</pre>
+<pre>986</pre>
+
+<h2>Sample Code in C</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main(void) {
+    int m;
+    long long n;
+    int t;
+    scanf("%d", &amp;m);
+    for(n = m, t = 0; n &gt; 1; t++) {
+        if (n % 2 == 0)
+            n /= 2;
+        else
+            n = n * 3 + 1;
+    }
+    printf("%d\n", t);
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in C++</h2>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int m;
+    cin &gt;&gt; m;
+    int t = 0;
+    for(long long n = m; n &gt; 1; t++) {
+        if (n % 2 == 0)
+            n /= 2;
+        else
+            n = n * 3 + 1;
+    }
+    cout &lt;&lt; t &lt;&lt; endl;
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in Java</h2>
+<pre>
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int m = sc.nextInt();
+        int t = 0;
+        for(long n = m; n &gt; 1; t++) {
+            if (n % 2 == 0)
+                n /= 2;
+            else
+                n = n * 3 + 1;
+        }
+        System.out.println(t);
+    }
+}
+</pre>
+
+<hr>
+
+<address>
+Problemsetter: TAKAHASHI Shuhei
+</address>

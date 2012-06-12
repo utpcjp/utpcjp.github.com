@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+<h2 class="probtitle">Problem B: 英作文</h2>
+
+<p>東京大学合格を目指す高校生のきたまさ君は、英語の試験対策をしていた。</p>
+<p>東大入試の英語試験では、英作文の問題が出題される。
+英作文の問題では単語数が40～60語などと指定されるのだが、きたまさ君は英語がとても苦手なので、長い文章を書くのにとても時間がかかってしまう。
+そこで、きたまさ君は指定された単語数の下限ギリギリの文章を書くために、単語数を数えるプログラムを書くことにした。
+</p>
+
+<h2>Input</h2>
+
+<p>入力は一行のみからなる文章である。
+文章はアルファベットの小文字 'a'-'z' と大文字 'A'-'Z'、空白文字 ' ' のみからなり、その長さは1000文字以下である。
+また、アルファベットが必ず一文字は含まれる。
+文章の先頭や、末尾、単語間に複数の空白文字が含まれる場合があるので注意せよ。
+</p>
+
+<h2>Output</h2>
+
+<p>単語数を一行に出力せよ。
+なお、単語とは連続するアルファベットの列のことを指す。
+</p>
+
+<h2>Sample Input 1</h2>
+<pre>I live in Tokyo
+</pre>
+<h2>Output for Sample Input 1</h2>
+<pre>4
+</pre>
+
+<h2>Sample Input 2</h2>
+<pre> Good luck  and  have fun
+</pre>
+<h2>Output for Sample Input 2</h2>
+<pre>5
+</pre>
+
+<h2>Sample Code in C</h2>
+<pre>
+#include &lt;stdio.h&gt;
+
+char str[1001];
+
+int main() {
+    int res = 0;
+    while (scanf("%s", str) != EOF) res++;
+    printf("%d\n", res);
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in C++</h2>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int res = 0;
+    string str;
+    while (cin &gt;&gt; str) res++;
+    cout &lt;&lt; res &lt;&lt; endl;
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in Java</h2>
+<pre>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(sc.nextLine().trim().split(" +").length);
+    }
+
+}
+</pre>
+
+<hr>
+
+<address>
+Problemsetter: Yoichi Iwata
+</address>
+</body></html>

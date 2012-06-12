@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+<h2>Problem C: 最短距離</h2>
+
+<p>二次元平面上に 2 つの点 <var>(x<sub>s</sub>, y<sub>s</sub>)</var>, <var>(x<sub>t</sub>, y<sub>t</sub>)</var> がある。両者の間の距離を求めよ。ただし、距離はユークリッド距離で測るとする。</p>
+
+<h2>Input</h2>
+<p>
+入力の 1 行目に 2 つの数 <var>x<sub>s</sub></var>, <var>y<sub>s</sub></var> が 1 つの空白文字で区切られて与えられる。2 行目も同様に、2 つの数 <var>x<sub>t</sub></var>, <var>y<sub>t</sub></var> が 1 つの空白文字で区切られて与えられる。</p>
+<p>与えられる数はすべて 0 以上 100 以下の実数である。</p>
+
+<h2>Output</h2>
+<p>2 点間の距離を、小数点以下 6 桁目を四捨五入することにより 5 桁目まで出力せよ。答えは10<sup>-5</sup>までの絶対誤差が許容される。</p>
+
+<h2>Sample Input</h2>
+<pre>
+0 0
+3 4
+</pre>
+
+<pre>
+0.0 0.0
+100.0 100.0
+</pre>
+
+<pre>
+10 10
+10 10.0
+</pre>
+
+<h2>Output for the Sample Input</h2>
+<pre>
+5.00000
+</pre>
+
+<pre>
+141.42136
+</pre>
+
+<pre>
+0.00000
+</pre>
+
+<h2>Sample Code in C</h2>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main(void) {
+    double x1, y1, x2, y2;
+    double s;
+    scanf("%lf%lf%lf%lf", &amp;x1, &amp;y1, &amp;x2, &amp;y2);
+    s = sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+    printf("%.5f\n", s);
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in C++</h2>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;cmath&gt;
+
+using namespace std;
+
+int main() {
+    double x1, y1, x2, y2;
+    cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2;
+    double s = sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+    cout &lt;&lt; fixed &lt;&lt; setprecision(5) &lt;&lt; s &lt;&lt; endl;
+    return 0;
+}
+</pre>
+
+<h2>Sample Code in Java</h2>
+<pre>
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double x1 = sc.nextDouble();
+        double y1 = sc.nextDouble();
+        double x2 = sc.nextDouble();
+        double y2 = sc.nextDouble();
+        double s = Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+        System.out.printf("%.5f\n", s);
+    }
+}
+</pre>
+
+<hr>
+
+<address>
+Problemsetter: TAKAHASHI Shuhei
+</address>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Problem R: ツンデレチェッカー</title>
+  </head>
+  <body>
+    <h1>Problem R: ツンデレチェッカー</h1>
+    <p>
+      ツンデレとは，「普段は澄ましたツンとした態度をとるが，意中の人などと2人となると急にデレっとしたかわいい態度をとるようなキャラクター」のことを指すスラングである．
+    </p>
+
+    <p>
+      あなたはツンデレなキャラクターが好きで好きでたまらないので，ついうっかり「キャラクター名を受け取ったらそのキャラクターがツンデレかどうかを判断するプログラム」を書こうとしてしまった．
+    </p>
+
+    <p>
+      <strong>注意：</strong> この問題は，誤答を送信する練習を行うために用意された問題であり，正しく解かれることを想定した問題ではない．「べっ，別にあんたに解いてもらいたくて用意したんじゃないんだからね！」
+    </p>
+
+    <h2>Input</h2>
+    <p>
+      先頭の行にデータセットの数 <var>N</var> (0 &lt; <var>N</var> &le; 20) が与えられる．以降の <var>N</var> 行にそれぞれのデータセットが続く．
+    </p>
+
+    <p>
+      それぞれのデータセットは，漫画・アニメ等のキャラクターの英語表記の名前のみを含む1行の文字列からなる．それぞれの名前は100文字以下であると仮定してよい．名前には空白文字が含まれうることに注意せよ．
+    </p>
+
+    <h2>Output</h2>
+    <p>
+      それぞれのデータセットについて1行の出力を行え．データセットで与えられたキャラクターがツンデレならば &ldquo;yes&rdquo;，そうでなければ &ldquo;no&rdquo; という文字列を出力せよ．
+    </p>
+
+    <h2>Sample Input</h2>
+    <pre>2
+Nagi Sanzen'in
+Isumi Saginomiya</pre>
+
+    <h2>Output for Sample Input</h2>
+    <pre>yes
+no</pre>
+
+    <h2>解答例</h2>
+    <p>以下に C, C++, Java によるこの問題の<strong>不完全な</strong>解答例を示す．</p>
+
+    <h3>C</h3>
+    <pre>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(void)
+{
+    int cases, i;
+    char name[102];
+
+    scanf("%d", &amp;cases);
+    fgets(name, 102, stdin);
+    for (i = 0; i &lt; cases; ++i) {
+        fgets(name, 102, stdin);
+        if (memcmp(name, "Nagi ", 5) == 0) puts("yes");
+        else puts("no");
+    }
+    return 0;
+}</pre>
+
+    <h3>C++</h3>
+    <pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main()
+{
+    int cases;
+    string name;
+    cin &gt;&gt; cases;
+    getline(cin, name);
+    for (int i = 0; i &lt; cases; ++i) {
+        getline(cin, name);
+        if (name.substr(0, 5) == "Nagi ") cout &lt;&lt; "yes\n";
+        else cout &lt;&lt; "no\n";
+    }
+    return 0;
+}</pre>
+
+    <h3>Java</h3>
+    <pre>import java.util.Scanner;
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int cases = sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i &lt; cases; ++i) {
+            String name = sc.nextLine();
+            if (name.startsWith("Nagi "))
+                System.out.println("yes");
+            else
+                System.out.println("no");
+        }
+    }
+}</pre>
+
+    <hr>
+    <address>
+      東京大学プログラミングコンテスト 2008<br>
+      Problemsetter: Yuta Kitamura
+    </address>
+  </body>
+</html>

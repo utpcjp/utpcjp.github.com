@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Problem P: 足し算</title>
+  </head>
+  <body>
+    <h1>Problem P: 足し算</h1>
+
+    <p>
+      2つの整数 <var>x</var>, <var>y</var> が与えられる．それらの和 <var>x</var> + <var>y</var> を出力するプログラムを作成せよ．
+    </p>
+
+    <h2>Input</h2>
+    <p>
+      入力は複数のデータセットからなる．それぞれのデータセットは，1つの空白文字で区切られた2つの整数 <var>x</var>, <var>y</var> からなる1行の文字列で与えられる．<var>x</var>, <var>y</var> は 0 &lt; <var>x</var> &le; 10000, 0 &lt; <var>y</var> &le; 10000 を満たす．
+    </p>
+
+    <p>
+      最後のデータセットの後ろに，入力の終了を示す &ldquo;<code>0 0</code>&rdquo; という行が与えられる．
+    </p>
+
+    <h2>Output</h2>
+    <p>
+      それぞれのデータセットに対して，2つの整数の和 <var>x</var> + <var>y</var> を1行で出力せよ．余計な空白文字を含んではならない．
+    </p>
+
+    <h2>Sample Input</h2>
+    <pre>1 2
+301 99
+10000 10000
+0 0</pre>
+
+    <h2>Output for Sample Input</h2>
+    <pre>3
+400
+20000</pre>
+
+    <h2>プログラムの作成の仕方</h2>
+    <p>
+      あなたのプログラムは，入力を標準入力から読み取り，その入力に対する答えを標準出力に出力しなければならない．あなたのプログラムの出力があらかじめ用意された解答と一致すれば正解，誤っていたり規定時間内に出力し終わらなかったりすると誤答と判定される．
+    </p>
+
+    <h3>Javaを使う場合の注意</h3>
+    <p>
+      Javaでプログラムを提出する際には，<code>main</code>メソッドを持つクラス名を <code>Main</code> にする必要があるので注意すること．
+    </p>
+
+    <h3>Mac OS X を使用している方への注意</h3>
+    <p>
+      Mac OS X ではバックスラッシュと円記号は別の文字として認識されるので，改行文字を出力する際に &ldquo;\n&rdquo; （バックスラッシュ + n）の代わりに &ldquo;&yen;n&rdquo; （円記号 + n）を使わないように注意すること．後者はエスケープシーケンスとして認識されず，円記号がそのまま出力されてしまうので， Wrong Answer と判定される．
+    </p>
+
+    <h2>プログラムの判定</h2>
+    <p>
+      プログラムが提出され，しばらくすると判定された結果が表示される．
+      プログラムの実行結果は以下のいずれかとなる．
+      Accepted以外は誤答と判断される．
+    </p>
+
+    <dl>
+      <dt>Accepted</dt>
+      <dd>正答．プログラムは規定時間以内に正しく終了し，正しい出力を行った．</dd>
+
+      <dt>Presentation Error</dt>
+      <dd>出力フォーマットの不正．プログラムは規定時間以内に正しく終了し，正しい出力を行ったが，スペース・改行の位置や数が誤っていた．</dd>
+
+      <dt>Wrong Answer</dt>
+      <dd>誤答．プログラムは規定時間以内に正しく終了したが，出力結果が誤っていた．</dd>
+
+      <dt>Time Limit Exceeded</dt>
+      <dd>実行時間超過．プログラムは規定時間以内に終了しなかった．</dd>
+
+      <dt>Output Limit Exceeded</dt>
+      <dd>出力制限超過．プログラムは，実行中に想定されている以上の大量の出力を行った．</dd>
+
+      <dt>Runtime Error</dt>
+      <dd>実行時エラー．プログラムは規定時間以内に終了したが，正常終了しなかった．原因としては，配列のアクセス違反が起こった場合や，例外が処理されなかった場合などがある．プログラムの終了コードが 0 でない場合に Runtime Error となるので，特にC言語を使う場合に<strong><code>main</code>関数の末尾で <code>return 0;</code>を行っていないとこの判定となってしまう</strong>ので注意すること．</dd>
+
+      <dt>Compile Error</dt>
+      <dd>コンパイルエラー．提出されたプログラムがコンパイルできなかった．コンパイルエラーの内容はリンクをクリックすることにより見ることができる．</dd>
+    </dl>
+
+    <h2>解答例</h2>
+    <p>以下に C, C++, Java によるこの問題の解答例を示す．</p>
+
+    <h3>C</h3>
+    <pre>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int x, y;
+    for (;;) {
+        scanf("%d%d", &amp;x, &amp;y);
+        if (x == 0 &amp;&amp; y == 0) break;
+        printf("%d\n", x + y);
+    }
+    return 0;
+}</pre>
+
+    <h3>C++</h3>
+    <pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    while (true) {
+        int x, y;
+        cin &gt;&gt; x &gt;&gt; y;
+        if (x == 0 &amp;&amp; y == 0) break;
+        cout &lt;&lt; x + y &lt;&lt; '\n';
+    }
+    return 0;
+}</pre>
+
+    <h3>Java</h3>
+    <pre>import java.util.Scanner;
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            if (x == 0 &amp;&amp; y == 0) break;
+            System.out.println(x + y);
+        }
+    }
+}</pre>
+
+    <hr>
+    <address>
+      東京大学プログラミングコンテスト 2008<br>
+      Problemsetter: Yuta Kitamura
+    </address>
+  </body>
+</html>
