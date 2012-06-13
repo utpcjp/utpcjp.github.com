@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
+<title>問題 L : <span style="font-size:110%;font-family:times new roman;"><i>L</i></span> 番目の数字</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 5951 2009-05-18 18:03:10Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left{
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: left }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="l-dollar-sign-l-dollar-sign">
+<h1 class="title">問題 L : <span style="font-size:110%;font-family:times new roman;"><i>L</i></span> 番目の数字</h1>
+
+<p>反乱を嗅ぎつけた多くの G○○gle のコーダーが我々を取り押さえにやってきた．
+かなりの数だ．
+その中には，東京大学時代に僕らを優しく指導してくれた先輩たちも多く見受けられる．
+残念ながら，今では敵同士だ．</p>
+<dl class="docutils">
+<dt>wata</dt>
+<dd>「予想以上の数だ…」</dd>
+<dt>(iwi)</dt>
+<dd>「ああ，我々が超高速指数時間アルゴリズムを持っているからと言って，それは彼らにようやく並んだに過ぎない．この数では…」</dd>
+<dt>？？</dt>
+<dd>「心配要らない！君たち，アルゴリズムをこっちに渡すんだ！」</dd>
+</dl>
+<p>声がした窓の外を見ると，G○○gle の建物に向きあう集団がいた．
+黒の生地に赤で I，緑で ○，黄色で M と書かれた T シャツ … 彼らは I○M か！？
+そして奇妙なことに，彼らは，向かってくる G○○gle のコーダー達を，
+キーボードに触れることなく倒していた．
+どうなっている？</p>
+<dl class="docutils">
+<dt>(iwi)</dt>
+<dd>「…！ ついに Wats○n 2 は完成したのか！」</dd>
+<dt>wata</dt>
+<dd>「どういうことだ？」</dd>
+</dl>
+<p>2011 年，I○M は彼らの高い技術力を活用し，
+自然言語で出題されたクイズに高速かつ正確に応答するシステムである Wats○n を完成させ，
+クイズ番組にてクイズ王と呼ばれてきた人間たちに勝利した．
+そして 20XX 年の今，Wats○n は，
+プログラミングコンテストの問題に対し解答のプログラムを作成するシステムとして生まれ変わったのだ．</p>
+<p>I○M の登場により，我々を取り囲む人数が減ってゆく．</p>
+<dl class="docutils">
+<dt>wata</dt>
+<dd>「チャンスだ！半分は任せられるか？」</dd>
+<dt>(iwi)</dt>
+<dd>「もちろんだ！」</dd>
+</dl>
+<p>僕は，妄想と決別したことにより，全てを思い出していた．
+当然，当時の知識や経験は，今から見ればレベルが低すぎて役に立たない．
+しかし，一番大切なものを思い出すことができた．
+それは，プログラミングコンテストを愛する気持ちである．
+問題を開く瞬間のワクワク感，サンプルが通った瞬間の盛り上がり，
+ステータスが更新される瞬間の緊張，勝利の瞬間の喜び．</p>
+<dl class="docutils">
+<dt>(iwi)</dt>
+<dd>「必ず kita_masa の復讐を果たし，この狂った世界を終わらせる！」</dd>
+</dl>
+<p>そして，僕は自信の 1 題を繰り出す．
+これは，東京大学時代の自分が愛した問題「<span style="font-size:110%;font-family:times new roman;"><i>K</i></span> 番目の数字」を独自のテクニックにより一般化かつ大規模化した問題である．</p>
+<div class="section" id="id1">
+<h1>問題</h1>
+<p>グラフが与えられる．</p>
+<ul class="simple">
+<li><span style="font-size:110%;font-family:times new roman;"><i>N</i></span> 個の頂点があり，頂点に <span style="font-size:110%;font-family:times new roman;">1</span> から <span style="font-size:110%;font-family:times new roman;"><i>N</i></span> の番号が付いている．</li>
+<li>これらの頂点は，<span style="font-size:110%;font-family:times new roman;"><i>N</i>&nbsp;-&nbsp;1</span> 本の辺によりツリー状に接続されている．</li>
+<li>各頂点 <span style="font-size:110%;font-family:times new roman;"><i>v</i></span> には数字 <span style="font-size:110%;font-family:times new roman;"><i>a</i><sub><i>v</i></sub></span> が定まっている．</li>
+</ul>
+<p>下図は，与えられるグラフの例である．
+各頂点には上部に頂点の番号が，下部にその頂点に定められた数字 (<span style="font-size:110%;font-family:times new roman;"><i>a</i><sub><i>v</i></sub></span>) が書かれている．</p>
+<div class="figure align-center">
+<img alt="../images/l_th_fig1.png" src="../images/l_th_fig1.png" />
+<p class="caption">与えられるグラフの例</p>
+</div>
+<p>次に，<span style="font-size:110%;font-family:times new roman;"><i>Q</i></span> 個の以下のようなクエリが与えられる．</p>
+<ul class="simple">
+<li>各クエリ <span style="font-size:110%;font-family:times new roman;"><i>q</i></span> には，頂点 <span style="font-size:110%;font-family:times new roman;"><i>v</i><sub><i>q</i></sub>,&nbsp;<i>w</i><sub><i>q</i></sub></span> と整数 <span style="font-size:110%;font-family:times new roman;"><i>l</i><sub><i>q</i></sub></span> が指定される．</li>
+<li>頂点 <span style="font-size:110%;font-family:times new roman;"><i>v</i><sub><i>q</i></sub></span> から頂点 <span style="font-size:110%;font-family:times new roman;"><i>w</i><sub><i>q</i></sub></span> への経路に含まれる頂点の数字のうち <span style="font-size:110%;font-family:times new roman;"><i>l</i><sub><i>q</i></sub></span> 番目に小さいものを求めよ．<ul>
+<li>経路は単純なもののみを考える．単純な経路とは，同じ頂点を二度通らない経路のことである．グラフがツリー状であることから，単純な経路は一意である．</li>
+<li>経路には両端点（すなわち頂点 <span style="font-size:110%;font-family:times new roman;"><i>v</i><sub><i>q</i></sub>,&nbsp;<i>w</i><sub><i>q</i></sub></span>）を含むものとする．</li>
+</ul>
+</li>
+</ul>
+<p>例えば，上図のグラフが与えられている時，
+<span style="font-size:110%;font-family:times new roman;">(<i>v</i><sub><i>q</i></sub>,&nbsp;<i>w</i><sub><i>q</i></sub>,&nbsp;<i>l</i><sub><i>q</i></sub>)&nbsp;=&nbsp;(1,&nbsp;6,&nbsp;3)</span> なるクエリ <span style="font-size:110%;font-family:times new roman;"><i>q</i></span> に対する答えは 7 である．
+これは，頂点 1 から頂点 6 への経路には頂点 1, 3, 4, 6 が含まれており，
+それらに定まった数字 2, 5, 8, 7 の 3 番目めに小さな数字は 7 であることによる．</p>
+<p>グラフとクエリを受け取り，結果を出力するプログラムを作成せよ．</p>
+</div>
+<div class="section" id="id2">
+<h1>入力</h1>
+<p>入力の最初の行は 2 つの整数 <span style="font-size:110%;font-family:times new roman;"><i>N</i>,&nbsp;<i>Q</i></span> を含む．
+これは，頂点数とクエリの数を表す．</p>
+<p>続く <span style="font-size:110%;font-family:times new roman;"><i>N</i></span> 行は，各頂点の持つ数字を表す．
+これらの行のうちの <span style="font-size:110%;font-family:times new roman;"><i>v</i></span> 行目は 1 つの整数 <span style="font-size:110%;font-family:times new roman;"><i>x</i><sub><i>v</i></sub></span> が書かれており，
+これは頂点 <span style="font-size:110%;font-family:times new roman;"><i>v</i></span> の持つ数字を表す．</p>
+<p>続く <span style="font-size:110%;font-family:times new roman;"><i>N</i>&nbsp;-&nbsp;1</span> 行は，辺の情報を表す．
+これらの行のうちの <span style="font-size:110%;font-family:times new roman;"><i>e</i></span> 行目は 2 つの整数 <span style="font-size:110%;font-family:times new roman;"><i>a</i><sub><i>e</i></sub>,&nbsp;<i>b</i><sub><i>e</i></sub></span> が書かれており，
+これらは辺 <span style="font-size:110%;font-family:times new roman;"><i>e</i></span> が結ぶ 2 つの頂点を表す．</p>
+<p>続く <span style="font-size:110%;font-family:times new roman;"><i>Q</i></span> 行は，クエリの情報を表す．
+これらの行のうちの <span style="font-size:110%;font-family:times new roman;"><i>q</i></span> 行目は 3 つの整数
+<span style="font-size:110%;font-family:times new roman;"><i>v</i><sub><i>q</i></sub>,&nbsp;<i>w</i><sub><i>q</i></sub>,&nbsp;<i>l</i><sub><i>q</i></sub></span> が書かれており，
+これらはクエリ <span style="font-size:110%;font-family:times new roman;"><i>q</i></span> の情報を表す．</p>
+</div>
+<div class="section" id="id3">
+<h1>出力</h1>
+<p>出力は <span style="font-size:110%;font-family:times new roman;"><i>Q</i></span> 行からなる．<span style="font-size:110%;font-family:times new roman;"><i>q</i></span> 行目にクエリ <span style="font-size:110%;font-family:times new roman;"><i>q</i></span> の答えを出力せよ．</p>
+</div>
+<div class="section" id="id4">
+<h1>入力に関する制約</h1>
+<ul class="simple">
+<li><span style="font-size:110%;font-family:times new roman;">1&nbsp;&le;&nbsp;<i>N</i>,&nbsp;<i>Q</i>&nbsp;&le;&nbsp;10<sup>5</sup></span></li>
+<li><span style="font-size:110%;font-family:times new roman;">1&nbsp;&le;&nbsp;<i>x</i><sub><i>v</i></sub>&nbsp;&le;&nbsp;10<sup>9</sup></span></li>
+<li><span style="font-size:110%;font-family:times new roman;">1&nbsp;&le;&nbsp;<i>a</i><sub><i>e</i></sub>,&nbsp;<i>b</i><sub><i>e</i></sub>&nbsp;&le;&nbsp;<i>N</i></span></li>
+<li><span style="font-size:110%;font-family:times new roman;">1&nbsp;&le;&nbsp;<i>v</i><sub><i>q</i></sub>,&nbsp;<i>w</i><sub><i>q</i></sub>&nbsp;&le;&nbsp;<i>N</i></span></li>
+<li>頂点 <span style="font-size:110%;font-family:times new roman;"><i>v</i><sub><i>q</i></sub></span> から頂点 <span style="font-size:110%;font-family:times new roman;"><i>w</i><sub><i>q</i></sub></span> への経路には <span style="font-size:110%;font-family:times new roman;"><i>l</i><sub><i>q</i></sub></span> 個以上の頂点が存在する．</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h1>入出力例</h1>
+<p>入力例:</p>
+<pre class="literal-block">
+6 11
+2
+4
+5
+8
+9
+7
+1 3
+2 3
+3 4
+4 5
+4 6
+1 6 1
+1 6 2
+1 6 3
+1 6 4
+1 2 1
+1 2 2
+1 2 3
+2 5 1
+2 5 2
+2 5 3
+2 5 4
+</pre>
+<p>入力例に対する出力:</p>
+<pre class="literal-block">
+2
+5
+7
+8
+2
+4
+5
+4
+5
+8
+9
+</pre>
+</div>
+</div>
+<hr><address>Problemsetter: 秋葉 拓哉</address>
+</html>
