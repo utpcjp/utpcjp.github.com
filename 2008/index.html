@@ -1,233 +1,303 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ja">
+<!doctype html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <title>東京大学プログラミングコンテスト2008</title>
-    <style type="text/css">
-      <!--
-        table { margin-left: auto; margin-right: auto; }
-      -->
-    </style>
   </head>
   <body>
-    <h1>東京大学プログラミングコンテスト2008</h1>
-    <p>東京大学プログラミングコンテストの第1回目のコンテストである東京大学プログラミングコンテスト2008は2008年5月31日に開催されました．多数の方のご参加をいただき，誠にありがとうございました．</p>
 
-    <h2>問題セット</h2>
-    <p>5時間のコンテストで以下の12問が出題されました．なお，コンテスト中に Problem E と Problem L について問題文の修正が行われましたが，下記の問題文では既に修正が反映されています．</p>
-    <ul>
-      <li><a href="problems/athletic.html">Problem A: サイゾウ</a></li>
-      <li><a href="problems/perfect.html">Problem B: 完全数</a></li>
-      <li><a href="problems/rummy.html">Problem C: ラミー</a></li>
-      <li><a href="problems/tank.html">Problem D: バトルタウン</a></li>
-      <li><a href="problems/road.html">Problem E: カントリーロード</a></li>
-      <li><a href="problems/rhythm.html">Problem F: リズムマシーン</a></li>
-      <li><a href="problems/energy.html">Proglem G: エナジー・トランスポーター</a></li>
-      <li><a href="problems/railroad.html">Problem H: いけるかな？</a></li>
-      <li><a href="problems/chase.html">Problem I: Aaron と Bruce</a></li>
-      <li><a href="problems/expression.html">Problem J: いにしえの数式</a></li>
-      <li><a href="problems/radio.html">Problem K: 電波基地</a></li>
-      <li><a href="problems/toy.html">Problem L: チクチクバンバン</a></li>
-    </ul>
+    <div class="container">
 
-    <p>すべての問題が掲載された <a href="problems/utpc2008.pdf">PDF版の問題文</a> もあります．</p>
+      <!-- start header -->
 
-    <p>また，練習用の問題として下記の3問が出題されました．</p>
-    <ul>
-      <li><a href="problems/add.html">Problem P: 足し算</a></li>
-      <li><a href="problems/reverse.html">Problem Q: 合い言葉</a></li>
-      <li><a href="problems/tsundere.html">Problem R: ツンデレチェッカー</a></li>
-    </ul>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="/">utpc.jp</a>
+        </div>
+      </div>
 
-    <h2>データセット</h2>
-    <p>審判用に使われた入力は以下の通りです（ファイルサイズが大きいものがありますのでご注意ください）．</p>
-    <table border="1">
-      <thead>
-	<tr>
-	  <th>問題</th>
-	  <th>入力</th>
-	  <th>出力</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>Problem A: サイゾウ</td>
-	  <td><a href="dataset/athletic.in">athletic.in</a></td>
-	  <td><a href="dataset/athletic.out">athletic.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem B: 完全数</td>
-	  <td><a href="dataset/perfect.in">perfect.in</a></td>
-	  <td><a href="dataset/perfect.out">perfect.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem C: ラミー</td>
-	  <td><a href="dataset/rummy.in">rummy.in</a></td>
-	  <td><a href="dataset/rummy.out">rummy.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem D: バトルタウン</td>
-	  <td><a href="dataset/tank.in">tank.in</a></td>
-	  <td><a href="dataset/tank.out">tank.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem E: カントリーロード</td>
-	  <td><a href="dataset/road.in">road.in</a></td>
-	  <td><a href="dataset/road.out">road.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem F: リズムマシーン</td>
-	  <td><a href="dataset/rhythm.in">rhythm.in</a></td>
-	  <td><a href="dataset/rhythm.out">rhythm.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem G: エナジー・トランスポーター</td>
-	  <td><a href="dataset/energy.in">energy.in</a></td>
-	  <td><a href="dataset/energy.out">energy.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem H: いけるかな？</td>
-	  <td><a href="dataset/railroad.in">railroad.in</a></td>
-	  <td><a href="dataset/railroad.out">railroad.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem I: Aaron と Bruce</td>
-	  <td><a href="dataset/chase.in">chase.in</a></td>
-	  <td><a href="dataset/chase.out">chase.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem J: いにしえの数式</td>
-	  <td><a href="dataset/expression.in">expression.in</a></td>
-	  <td><a href="dataset/expression.out">expression.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem K: 電波基地</td>
-	  <td><a href="dataset/radio.in">radio.in</a></td>
-	  <td><a href="dataset/radio.out">radio.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem L: チクチクバンバン</td>
-	  <td><a href="dataset/toy.in">toy.in</a></td>
-	  <td><a href="dataset/toy.out">toy.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem P: 足し算</td>
-	  <td><a href="dataset/add.in">add.in</a></td>
-	  <td><a href="dataset/add.out">add.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem Q: 合い言葉</td>
-	  <td><a href="dataset/reverse.in">reverse.in</a></td>
-	  <td><a href="dataset/reverse.out">reverse.out</a></td>
-	</tr>
-	<tr>
-	  <td>Problem R: ツンデレチェッカー</td>
-	  <td><a href="dataset/tsundere.in">tsundere.in</a></td>
-	  <td><a href="dataset/tsundere.out">tsundere.out</a></td>
-	</tr>
-      </tbody>
-    </table>
+      <div class="hero-unit">
+        <h1>UTPC 2008</h1>
+        <p>
+          東京大学プログラミングコンテスト2008<br>
+          May 31, 2008
+        </p>
+      </div>
 
-    <p><a href="dataset/utpc2008.zip">上記のすべての入出力をまとめたZIPアーカイブ</a>もあります．</p>
+      <!-- end header -->
 
-    <h2>問題文・入出力データの利用について</h2>
-    <p>上記の問題文および入出力データは東京大学プログラミングコンテスト実行委員会が作成したものです．これらの問題文とデータの使用・複製・改変等の利用は東京大学プログラミングコンテスト実行委員会の許可なく自由に行っていただいて構いません．ただし，利用によって生じる障害・損害の一切について当方では責任を負わないものとします．</p>
+      <div class="row">
+        <div class="span12">
 
-    <h2>結果</h2>
-    <p>1位は12問中10問を解いた東京大学大学院情報理工学系研究科の高橋周平さん，2位は東京大学大学院OBの田中英行さん，3位は東京大学教養学部理科一類の岩田陽一さんでした．おめでとうございます．</p>
-    <p>結果の詳細については以下をご覧ください．</p>
-    <ul>
-      <li><a href="standings.html">最終順位表</a></li>
-      <li><a href="statistics.html">提出状況</a></li>
-    </ul>
+          <p>東京大学プログラミングコンテストの第1回目のコンテストである東京大学プログラミングコンテスト2008は2008年5月31日に開催されました．多数の方のご参加をいただき，誠にありがとうございました．</p>
 
-    <h2>講評</h2>
-    <table border="1">
-      <thead>
-	<tr>
-	  <th>問題</th>
-	  <th>講評 (PDF)</th>
-	  <th>講評 (PowerPoint)</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>Problem A: サイゾウ</td>
-	  <td rowspan="4"><a href="slides/abde.pdf">abde.pdf</a></td>
-	  <td rowspan="4"><a href="slides/abde.ppt">abde.ppt</a></td>
-	</tr>
-	<tr>
-	  <td>Problem B: 完全数</td>
-	</tr>
-	<tr>
-	  <td>Problem D: バトルタウン</td>
-	</tr>
-	<tr>
-	  <td>Problem E: カントリーロード</td>
-	</tr>
-	<tr>
-	  <td>Problem C: ラミー</td>
-	  <td><a href="slides/rummy.pdf">rummy.pdf</a></td>
-	  <td><a href="slides/rummy.pptx">rummy.pptx</a></td>
-	</tr>
-	<tr>
-	  <td>Problem F: リズムマシーン</td>
-	  <td><a href="slides/rhythm.pdf">rhythm.pdf</a></td>
-	  <td><a href="slides/rhythm.pptx">rhythm.pptx</a></td>
-	</tr>
-	<tr>
-	  <td>Problem G: エナジー・トランスポーター</td>
-	  <td><a href="slides/energy.pdf">energy.pdf</a></td>
-	  <td><a href="slides/energy.pptx">energy.pptx</a></td>
-	</tr>
-	<tr>
-	  <td>Problem H: いけるかな？</td>
-	  <td><a href="slides/railroad.pdf">railroad.pdf</a></td>
-	  <td><a href="slides/railroad.ppt">railroad.ppt</a></td>
-	</tr>
-	<tr>
-	  <td>Problem I: Aaron と Bruce</td>
-	  <td><a href="slides/chase.pdf">chase.pdf</a></td>
-	  <td><a href="slides/chase.ppt">chase.ppt</a></td>
-	</tr>
-	<tr>
-	  <td>Problem J: いにしえの数式</td>
-	  <td><a href="slides/expression.pdf">expression.pdf</a></td>
-	  <td><a href="slides/expression.pptx">expression.pptx</a></td>
-	</tr>
-	<tr>
-	  <td>Problem K: 電波基地</td>
-	  <td><a href="slides/radio.pdf">radio.pdf</a></td>
-	  <td><a href="slides/radio.pptx">radio.pptx</a></td>
-	</tr>
-	<tr>
-	  <td>Problem L: チクチクバンバン</td>
-	  <td><a href="slides/toy.pdf">toy.pdf</a></td>
-	  <td><a href="slides/toy.pptx">toy.pptx</a></td>
-	</tr>
-	<tr>
-	  <td>Problem R: ツンデレチェッカー</td>
-	  <td><a href="slides/tsundere.pdf">tsundere.pdf</a></td>
-	  <td><a href="slides/tsundere.pptx">tsundere.pptx</a></td>
-	</tr>
-      </tbody>
-    </table>
+        </div><!-- .span12 -->
+      </div><!-- .row -->
 
-    <h2>スタッフ</h2>
-    <p>東京大学プログラミングコンテスト2008 は以下のスタッフにより企画・運営されました．全員東京大学大学院情報理工学系研究科に所属しています．</p>
-    <ul>
-      <li>松本宜丈（企画・総務）</li>
-      <li>北村裕太（システム）</li>
-      <li>小島晃司（問題作成管理）</li>
-      <li>小西祐介</li>
-      <li>坪坂正志</li>
-      <li>中島貴裕</li>
-      <li>八森勉</li>
-    </ul>
+      <div class="row">
+        <div class="span12">
 
-    <hr>
-    <address>東京大学プログラミングコンテスト実行委員会</address>
+          <h2>問題セット</h2>
+          <p>5時間のコンテストで以下の12問が出題されました．なお，コンテスト中に Problem E と Problem L について問題文の修正が行われましたが，下記の問題文では既に修正が反映されています．</p>
+          <ul>
+            <li><a href="problems/athletic.html">Problem A: サイゾウ</a></li>
+            <li><a href="problems/perfect.html">Problem B: 完全数</a></li>
+            <li><a href="problems/rummy.html">Problem C: ラミー</a></li>
+            <li><a href="problems/tank.html">Problem D: バトルタウン</a></li>
+            <li><a href="problems/road.html">Problem E: カントリーロード</a></li>
+            <li><a href="problems/rhythm.html">Problem F: リズムマシーン</a></li>
+            <li><a href="problems/energy.html">Proglem G: エナジー・トランスポーター</a></li>
+            <li><a href="problems/railroad.html">Problem H: いけるかな？</a></li>
+            <li><a href="problems/chase.html">Problem I: Aaron と Bruce</a></li>
+            <li><a href="problems/expression.html">Problem J: いにしえの数式</a></li>
+            <li><a href="problems/radio.html">Problem K: 電波基地</a></li>
+            <li><a href="problems/toy.html">Problem L: チクチクバンバン</a></li>
+          </ul>
+
+          <p>すべての問題が掲載された <a href="problems/utpc2008.pdf">PDF版の問題文</a> もあります．</p>
+
+          <p>また，練習用の問題として下記の3問が出題されました．</p>
+          <ul>
+            <li><a href="problems/add.html">Problem P: 足し算</a></li>
+            <li><a href="problems/reverse.html">Problem Q: 合い言葉</a></li>
+            <li><a href="problems/tsundere.html">Problem R: ツンデレチェッカー</a></li>
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>データセット</h2>
+          <p>審判用に使われた入力は以下の通りです（ファイルサイズが大きいものがありますのでご注意ください）．</p>
+          <table border="1">
+            <thead>
+	            <tr>
+	              <th>問題</th>
+	              <th>入力</th>
+	              <th>出力</th>
+	            </tr>
+            </thead>
+            <tbody>
+	            <tr>
+	              <td>Problem A: サイゾウ</td>
+	              <td><a href="dataset/athletic.in">athletic.in</a></td>
+	              <td><a href="dataset/athletic.out">athletic.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem B: 完全数</td>
+	              <td><a href="dataset/perfect.in">perfect.in</a></td>
+	              <td><a href="dataset/perfect.out">perfect.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem C: ラミー</td>
+	              <td><a href="dataset/rummy.in">rummy.in</a></td>
+	              <td><a href="dataset/rummy.out">rummy.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem D: バトルタウン</td>
+	              <td><a href="dataset/tank.in">tank.in</a></td>
+	              <td><a href="dataset/tank.out">tank.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem E: カントリーロード</td>
+	              <td><a href="dataset/road.in">road.in</a></td>
+	              <td><a href="dataset/road.out">road.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem F: リズムマシーン</td>
+	              <td><a href="dataset/rhythm.in">rhythm.in</a></td>
+	              <td><a href="dataset/rhythm.out">rhythm.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem G: エナジー・トランスポーター</td>
+	              <td><a href="dataset/energy.in">energy.in</a></td>
+	              <td><a href="dataset/energy.out">energy.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem H: いけるかな？</td>
+	              <td><a href="dataset/railroad.in">railroad.in</a></td>
+	              <td><a href="dataset/railroad.out">railroad.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem I: Aaron と Bruce</td>
+	              <td><a href="dataset/chase.in">chase.in</a></td>
+	              <td><a href="dataset/chase.out">chase.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem J: いにしえの数式</td>
+	              <td><a href="dataset/expression.in">expression.in</a></td>
+	              <td><a href="dataset/expression.out">expression.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem K: 電波基地</td>
+	              <td><a href="dataset/radio.in">radio.in</a></td>
+	              <td><a href="dataset/radio.out">radio.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem L: チクチクバンバン</td>
+	              <td><a href="dataset/toy.in">toy.in</a></td>
+	              <td><a href="dataset/toy.out">toy.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem P: 足し算</td>
+	              <td><a href="dataset/add.in">add.in</a></td>
+	              <td><a href="dataset/add.out">add.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem Q: 合い言葉</td>
+	              <td><a href="dataset/reverse.in">reverse.in</a></td>
+	              <td><a href="dataset/reverse.out">reverse.out</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem R: ツンデレチェッカー</td>
+	              <td><a href="dataset/tsundere.in">tsundere.in</a></td>
+	              <td><a href="dataset/tsundere.out">tsundere.out</a></td>
+	            </tr>
+            </tbody>
+          </table>
+
+          <p><a href="dataset/utpc2008.zip">上記のすべての入出力をまとめたZIPアーカイブ</a>もあります．</p>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>問題文・入出力データの利用について</h2>
+          <p>上記の問題文および入出力データは東京大学プログラミングコンテスト実行委員会が作成したものです．これらの問題文とデータの使用・複製・改変等の利用は東京大学プログラミングコンテスト実行委員会の許可なく自由に行っていただいて構いません．ただし，利用によって生じる障害・損害の一切について当方では責任を負わないものとします．</p>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>結果</h2>
+          <p>1位は12問中10問を解いた東京大学大学院情報理工学系研究科の高橋周平さん，2位は東京大学大学院OBの田中英行さん，3位は東京大学教養学部理科一類の岩田陽一さんでした．おめでとうございます．</p>
+          <p>結果の詳細については以下をご覧ください．</p>
+          <ul>
+            <li><a href="standings.html">最終順位表</a></li>
+            <li><a href="statistics.html">提出状況</a></li>
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>講評</h2>
+          <table border="1">
+            <thead>
+	            <tr>
+	              <th>問題</th>
+	              <th>講評 (PDF)</th>
+	              <th>講評 (PowerPoint)</th>
+	            </tr>
+            </thead>
+            <tbody>
+	            <tr>
+	              <td>Problem A: サイゾウ</td>
+	              <td rowspan="4"><a href="slides/abde.pdf">abde.pdf</a></td>
+	              <td rowspan="4"><a href="slides/abde.ppt">abde.ppt</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem B: 完全数</td>
+	            </tr>
+	            <tr>
+	              <td>Problem D: バトルタウン</td>
+	            </tr>
+	            <tr>
+	              <td>Problem E: カントリーロード</td>
+	            </tr>
+	            <tr>
+	              <td>Problem C: ラミー</td>
+	              <td><a href="slides/rummy.pdf">rummy.pdf</a></td>
+	              <td><a href="slides/rummy.pptx">rummy.pptx</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem F: リズムマシーン</td>
+	              <td><a href="slides/rhythm.pdf">rhythm.pdf</a></td>
+	              <td><a href="slides/rhythm.pptx">rhythm.pptx</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem G: エナジー・トランスポーター</td>
+	              <td><a href="slides/energy.pdf">energy.pdf</a></td>
+	              <td><a href="slides/energy.pptx">energy.pptx</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem H: いけるかな？</td>
+	              <td><a href="slides/railroad.pdf">railroad.pdf</a></td>
+	              <td><a href="slides/railroad.ppt">railroad.ppt</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem I: Aaron と Bruce</td>
+	              <td><a href="slides/chase.pdf">chase.pdf</a></td>
+	              <td><a href="slides/chase.ppt">chase.ppt</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem J: いにしえの数式</td>
+	              <td><a href="slides/expression.pdf">expression.pdf</a></td>
+	              <td><a href="slides/expression.pptx">expression.pptx</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem K: 電波基地</td>
+	              <td><a href="slides/radio.pdf">radio.pdf</a></td>
+	              <td><a href="slides/radio.pptx">radio.pptx</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem L: チクチクバンバン</td>
+	              <td><a href="slides/toy.pdf">toy.pdf</a></td>
+	              <td><a href="slides/toy.pptx">toy.pptx</a></td>
+	            </tr>
+	            <tr>
+	              <td>Problem R: ツンデレチェッカー</td>
+	              <td><a href="slides/tsundere.pdf">tsundere.pdf</a></td>
+	              <td><a href="slides/tsundere.pptx">tsundere.pptx</a></td>
+	            </tr>
+            </tbody>
+          </table>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>スタッフ</h2>
+          <p>東京大学プログラミングコンテスト2008 は以下のスタッフにより企画・運営されました．全員東京大学大学院情報理工学系研究科に所属しています．</p>
+          <ul>
+            <li>松本宜丈（企画・総務）</li>
+            <li>北村裕太（システム）</li>
+            <li>小島晃司（問題作成管理）</li>
+            <li>小西祐介</li>
+            <li>坪坂正志</li>
+            <li>中島貴裕</li>
+            <li>八森勉</li>
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <!-- start footer -->
+
+      <hr>
+
+      <footer>
+        東京大学プログラミングコンテスト実行委員会
+      </footer>
+
+      <!-- end footer -->
+
+    </div><!-- .container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

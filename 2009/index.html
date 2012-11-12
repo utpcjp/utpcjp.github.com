@@ -1,218 +1,292 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-          "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ja">
+<!doctype html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <title>東京大学プログラミングコンテスト2009</title>
   </head>
   <body>
 
-    <h1>東京大学プログラミングコンテスト2009</h1>
-    <p>東京大学プログラミングコンテストの第2回目のコンテストである東京大学プログラミングコンテスト2009は2009年6月7日に開催されました．多数の方のご参加をいただき，誠にありがとうございました．</p>
+    <div class="container">
 
-    <h2>問題セット</h2>
-    <p>5時間のコンテストで以下の12問が出題されました．なお，コンテスト中に Problem H と Problem J について問題文の修正が行われましたが，下記の問題文では既に修正が反映されています．</p>
-    <ul>
-      <li><a href="problems/kawaii.html">Problem A: ねこかわいがり</a></li>
-      <li><a href="problems/heian.html">Problem B: 平安京ウォーキング</a></li>
-      <li><a href="problems/card.html">Problem C: カードゲーム</a></li>
-      <li><a href="problems/unit.html">Problem D: 単位変換器</a></li>
-      <li><a href="problems/add.html">Problem E: 足し算ゲーム</a></li>
-      <li><a href="problems/angel.html">Problem F: 天使の階段</a></li>
-      <li><a href="problems/bookoff.html">Proglem G: 挨拶の多い本屋さん</a></li>
-      <li><a href="problems/amida.html">Problem H: あみだくじ</a></li>
-      <li><a href="problems/summer.html">Problem I: 夏への扉</a></li>
-      <li><a href="problems/pickup.html">Problem J: ねこ泥棒と金曜日のお屋敷</a></li>
-      <li><a href="problems/catnum.html">Problem K: Cat Numbers!</a></li>
-      <li><a href="problems/noir.html">Problem L: シャノワール</a></li>
-    </ul>
+      <!-- start header -->
 
-    <p>また，練習用の問題として下記の4問が出題されました．</p>
-    <ul>
-      <li><a href="problems/collatz.html">Problem A': コラッツ予想</a></li>
-      <li><a href="problems/strcat.html">Problem B': 文字列連結</a></li>
-      <li><a href="problems/dist.html">Problem C': 最短距離</a></li>
-      <li><a href="problems/nya.html">Problem D': にゃー</a></li>
-    </ul>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="/">utpc.jp</a>
+        </div>
+      </div>
 
-    <h2>データセット</h2>
-    <p>審判用に使われた入出力は以下の通りです（ファイルサイズが大きいものがありますのでご注意ください）．</p>
-    <table border="1">
-      <thead>
-	    <tr>
+      <div class="hero-unit">
+        <h1>UTPC 2009</h1>
+        <p>
+          東京大学プログラミングコンテスト2009<br>
+          June 7, 2009
+        </p>
+      </div>
 
-	      <th>問題</th>
-	      <th>入出力</th>
-	    </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Problem A: ねこかわいがり</td>
-          <td><a href="dataset/kawaii.zip">kawaii.zip</td>
-        </tr>
-        <tr>
-          <td>Problem B: 平安京ウォーキング</td>
-          <td><a href="dataset/heian.zip">heian.zip</td>
-        </tr>
-        <tr>
-          <td>Problem C: カードゲーム</td>
-          <td><a href="dataset/card.zip">card.zip</td>
-        </tr>
-        <tr>
-          <td>Problem D: 単位変換器</td>
-          <td><a href="dataset/unit.zip">unit.zip</td>
-        </tr>
-        <tr>
-          <td>Problem E: 足し算ゲーム</td>
-          <td><a href="dataset/add.zip">add.zip</td>
-        </tr>
-        <tr>
-          <td>Problem F: 天使の階段</td>
-          <td><a href="dataset/angel.zip">angel.zip</td>
-        </tr>
-        <tr>
-          <td>Proglem G: 挨拶の多い本屋さん</td>
-          <td><a href="dataset/bookoff.zip">bookoff.zip</td>
-        </tr>
-        <tr>
-          <td>Problem H: あみだくじ</td>
-          <td><a href="dataset/amida.zip">amida.zip</td>
-        </tr>
-        <tr>
-          <td>Problem I: 夏への扉</td>
-          <td><a href="dataset/summer.zip">summer.zip</td>
-        </tr>
-        <tr>
-          <td>Problem J: ねこ泥棒と金曜日のお屋敷</td>
-          <td><a href="dataset/pickup.zip">pickup.zip</td>
-        </tr>
-        <tr>
-          <td>Problem K: Cat Numbers!</td>
-          <td><a href="dataset/catnum.zip">catnum.zip</td>
-        </tr>
-        <tr>
-          <td>Problem L: シャノワール</td>
-          <td><a href="dataset/noir.zip">noir.zip</td>
-        </tr>
+      <!-- end header -->
 
-        <tr>
-          <td>Problem A': コラッツ予想</td>
-          <td><a href="dataset/collatz.zip">collatz.zip</td>
-        </tr>
-        <tr>
-          <td>Problem B': 文字列連結</td>
-          <td><a href="dataset/strcat.zip">strcat.zip</td>
-        </tr>
-        <tr>
-          <td>Problem C': 最短距離</td>
-          <td><a href="dataset/dist.zip">dist.zip</td>
-        </tr>
-        <tr>
-          <td>Problem D': にゃー</td>
-          <td><a href="dataset/nya.zip">nya.zip</td>
-        </tr>
+      <div class="row">
+        <div class="span12">
 
-      </tbody>
-    </table>
+          <p>東京大学プログラミングコンテストの第2回目のコンテストである東京大学プログラミングコンテスト2009は2009年6月7日に開催されました．多数の方のご参加をいただき，誠にありがとうございました．</p>
 
-    <p><a href="dataset/utpc2009.zip">上記のすべての入出力をまとめたZIPアーカイブ</a>もあります．</p>
+        </div><!-- .span12 -->
+      </div><!-- .row -->
 
-    <h2>問題文・入出力データの利用について</h2>
-    <p>上記の問題文および入出力データは東京大学プログラミングコンテスト実行委員会が作成したものです．これらの問題文とデータの使用・複製・改変等の利用は東京大学プログラミングコンテスト実行委員会の許可なく自由に行っていただいて構いません．ただし，利用によって生じる障害・損害の一切について当方では責任を負わないものとします．</p>
+      <div class="row">
+        <div class="span12">
 
-    <h2>結果</h2>
-    <p>1位は京都大学OBの田中伸明さん，2位は東京大学教養学部理科一類の片岡俊基さん，3位は東京大学理学部情報科学科の岩田陽一さんでした．おめでとうございます．</p>
-    <p>結果の詳細については以下をご覧ください．</p>
+          <h2>問題セット</h2>
+          <p>5時間のコンテストで以下の12問が出題されました．なお，コンテスト中に Problem H と Problem J について問題文の修正が行われましたが，下記の問題文では既に修正が反映されています．</p>
+          <ul>
+            <li><a href="problems/kawaii.html">Problem A: ねこかわいがり</a></li>
+            <li><a href="problems/heian.html">Problem B: 平安京ウォーキング</a></li>
+            <li><a href="problems/card.html">Problem C: カードゲーム</a></li>
+            <li><a href="problems/unit.html">Problem D: 単位変換器</a></li>
+            <li><a href="problems/add.html">Problem E: 足し算ゲーム</a></li>
+            <li><a href="problems/angel.html">Problem F: 天使の階段</a></li>
+            <li><a href="problems/bookoff.html">Proglem G: 挨拶の多い本屋さん</a></li>
+            <li><a href="problems/amida.html">Problem H: あみだくじ</a></li>
+            <li><a href="problems/summer.html">Problem I: 夏への扉</a></li>
+            <li><a href="problems/pickup.html">Problem J: ねこ泥棒と金曜日のお屋敷</a></li>
+            <li><a href="problems/catnum.html">Problem K: Cat Numbers!</a></li>
+            <li><a href="problems/noir.html">Problem L: シャノワール</a></li>
+          </ul>
 
-    <ul>
-      <li><a href="standings.html">最終順位表</a></li>
-      <li><a href="statistics.html">提出状況</a></li>
-    </ul>
+          <p>また，練習用の問題として下記の4問が出題されました．</p>
+          <ul>
+            <li><a href="problems/collatz.html">Problem A': コラッツ予想</a></li>
+            <li><a href="problems/strcat.html">Problem B': 文字列連結</a></li>
+            <li><a href="problems/dist.html">Problem C': 最短距離</a></li>
+            <li><a href="problems/nya.html">Problem D': にゃー</a></li>
+          </ul>
 
-    <h2>講評</h2>
-    <table border="1">
-      <thead>
+        </div><!-- .span12 -->
+      </div><!-- .row -->
 
-	    <tr>
-	      <th>問題</th>
-	      <th>講評 (PDF)</th>
-	      <th>講評 (PowerPoint)</th>
-	    </tr>
-      </thead>
-      <tbody>
+      <div class="row">
+        <div class="span12">
 
-        <tr>
-          <td>Problem A: ねこかわいがり</td>
-          <td rowspan="5"><a href="slides/abcde.pdf">abcde.pdf</td>
-          <td rowspan="5"><a href="slides/abcde.pptx">abcde.pptx</td>
-        </tr>
-        <tr>
-          <td>Problem B: 平安京ウォーキング</td>
-        </tr>
-        <tr>
-          <td>Problem C: カードゲーム</td>
-        </tr>
-        <tr>
-          <td>Problem D: 単位変換器</td>
-        </tr>
-        <tr>
-          <td>Problem E: 足し算ゲーム</td>
-        </tr>
-        <tr>
-          <td>Problem F: 天使の階段</td>
-          <td><a href="slides/angel.pdf">angel.pdf</td>
-          <td><a href="slides/angel.pptx">angel.pptx</td>
-        </tr>
-        <tr>
-          <td>Proglem G: 挨拶の多い本屋さん</td>
-          <td><a href="slides/bookoff.pdf">bookoff.pdf</td>
-          <td><a href="slides/bookoff.pptx">bookoff.pptx</td>
-        </tr>
-        <tr>
-          <td>Problem H: あみだくじ</td>
-          <td><a href="slides/amida.pdf">amida.pdf</td>
-          <td><a href="slides/amida.ppt">amida.pptx</td>
-        </tr>
-        <tr>
-          <td>Problem I: 夏への扉</td>
-          <td><a href="slides/summer.pdf">summer.pdf</td>
-          <td><a href="slides/summer.pptx">summer.pptx</td>
-        </tr>
-        <tr>
-          <td>Problem J: ねこ泥棒と金曜日のお屋敷</td>
-          <td><a href="slides/pickup.pdf">pickup.pdf</td>
-          <td><a href="slides/pickup.pptx">pickup.pptx</td>
-        </tr>
-        <tr>
-          <td>Problem K: Cat Numbers!</td>
-          <td><a href="slides/catnum.pdf">catnum.pdf</td>
-          <td><a href="slides/catnum.pptx">catnum.pptx</td>
-        </tr>
-        <tr>
-          <td>Problem L: シャノワール</td>
-          <td><a href="slides/noir.pdf">noir.pdf</td>
-          <td><a href="slides/noir.pptx">noir.pptx</td>
-        </tr>
+          <h2>データセット</h2>
+          <p>審判用に使われた入出力は以下の通りです（ファイルサイズが大きいものがありますのでご注意ください）．</p>
+          <table border="1">
+            <thead>
+	            <tr>
 
-      </tbody>
-    </table>
+	              <th>問題</th>
+	              <th>入出力</th>
+	            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Problem A: ねこかわいがり</td>
+                <td><a href="dataset/kawaii.zip">kawaii.zip</td>
+              </tr>
+              <tr>
+                <td>Problem B: 平安京ウォーキング</td>
+                <td><a href="dataset/heian.zip">heian.zip</td>
+              </tr>
+              <tr>
+                <td>Problem C: カードゲーム</td>
+                <td><a href="dataset/card.zip">card.zip</td>
+              </tr>
+              <tr>
+                <td>Problem D: 単位変換器</td>
+                <td><a href="dataset/unit.zip">unit.zip</td>
+              </tr>
+              <tr>
+                <td>Problem E: 足し算ゲーム</td>
+                <td><a href="dataset/add.zip">add.zip</td>
+              </tr>
+              <tr>
+                <td>Problem F: 天使の階段</td>
+                <td><a href="dataset/angel.zip">angel.zip</td>
+              </tr>
+              <tr>
+                <td>Proglem G: 挨拶の多い本屋さん</td>
+                <td><a href="dataset/bookoff.zip">bookoff.zip</td>
+              </tr>
+              <tr>
+                <td>Problem H: あみだくじ</td>
+                <td><a href="dataset/amida.zip">amida.zip</td>
+              </tr>
+              <tr>
+                <td>Problem I: 夏への扉</td>
+                <td><a href="dataset/summer.zip">summer.zip</td>
+              </tr>
+              <tr>
+                <td>Problem J: ねこ泥棒と金曜日のお屋敷</td>
+                <td><a href="dataset/pickup.zip">pickup.zip</td>
+              </tr>
+              <tr>
+                <td>Problem K: Cat Numbers!</td>
+                <td><a href="dataset/catnum.zip">catnum.zip</td>
+              </tr>
+              <tr>
+                <td>Problem L: シャノワール</td>
+                <td><a href="dataset/noir.zip">noir.zip</td>
+              </tr>
 
-    <h2>スタッフ</h2>
-    <p>東京大学プログラミングコンテスト2009 は以下のスタッフにより企画・運営されました．東京大学大学院情報理工学系研究科の院生，及びそのOBで構成されています．</p>
-    <ul>
+              <tr>
+                <td>Problem A': コラッツ予想</td>
+                <td><a href="dataset/collatz.zip">collatz.zip</td>
+              </tr>
+              <tr>
+                <td>Problem B': 文字列連結</td>
+                <td><a href="dataset/strcat.zip">strcat.zip</td>
+              </tr>
+              <tr>
+                <td>Problem C': 最短距離</td>
+                <td><a href="dataset/dist.zip">dist.zip</td>
+              </tr>
+              <tr>
+                <td>Problem D': にゃー</td>
+                <td><a href="dataset/nya.zip">nya.zip</td>
+              </tr>
 
-      <li>安達知也</li>
-      <li>北村裕太</li>
-      <li>小西祐介</li>
-      <li>高橋周平</li>
-      <li>前原貴憲</li>
-      <li>松本宜丈</li>
-      <li>山本和典</li>
+            </tbody>
+          </table>
 
-    </ul>
+          <p><a href="dataset/utpc2009.zip">上記のすべての入出力をまとめたZIPアーカイブ</a>もあります．</p>
 
-    <hr>
-    <address>東京大学プログラミングコンテスト実行委員会</address>
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>問題文・入出力データの利用について</h2>
+          <p>上記の問題文および入出力データは東京大学プログラミングコンテスト実行委員会が作成したものです．これらの問題文とデータの使用・複製・改変等の利用は東京大学プログラミングコンテスト実行委員会の許可なく自由に行っていただいて構いません．ただし，利用によって生じる障害・損害の一切について当方では責任を負わないものとします．</p>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>結果</h2>
+          <p>1位は京都大学OBの田中伸明さん，2位は東京大学教養学部理科一類の片岡俊基さん，3位は東京大学理学部情報科学科の岩田陽一さんでした．おめでとうございます．</p>
+          <p>結果の詳細については以下をご覧ください．</p>
+
+          <ul>
+            <li><a href="standings.html">最終順位表</a></li>
+            <li><a href="statistics.html">提出状況</a></li>
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>講評</h2>
+          <table border="1">
+            <thead>
+
+	            <tr>
+	              <th>問題</th>
+	              <th>講評 (PDF)</th>
+	              <th>講評 (PowerPoint)</th>
+	            </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Problem A: ねこかわいがり</td>
+                <td rowspan="5"><a href="slides/abcde.pdf">abcde.pdf</td>
+                <td rowspan="5"><a href="slides/abcde.pptx">abcde.pptx</td>
+              </tr>
+              <tr>
+                <td>Problem B: 平安京ウォーキング</td>
+              </tr>
+              <tr>
+                <td>Problem C: カードゲーム</td>
+              </tr>
+              <tr>
+                <td>Problem D: 単位変換器</td>
+              </tr>
+              <tr>
+                <td>Problem E: 足し算ゲーム</td>
+              </tr>
+              <tr>
+                <td>Problem F: 天使の階段</td>
+                <td><a href="slides/angel.pdf">angel.pdf</td>
+                <td><a href="slides/angel.pptx">angel.pptx</td>
+              </tr>
+              <tr>
+                <td>Proglem G: 挨拶の多い本屋さん</td>
+                <td><a href="slides/bookoff.pdf">bookoff.pdf</td>
+                <td><a href="slides/bookoff.pptx">bookoff.pptx</td>
+              </tr>
+              <tr>
+                <td>Problem H: あみだくじ</td>
+                <td><a href="slides/amida.pdf">amida.pdf</td>
+                <td><a href="slides/amida.ppt">amida.pptx</td>
+              </tr>
+              <tr>
+                <td>Problem I: 夏への扉</td>
+                <td><a href="slides/summer.pdf">summer.pdf</td>
+                <td><a href="slides/summer.pptx">summer.pptx</td>
+              </tr>
+              <tr>
+                <td>Problem J: ねこ泥棒と金曜日のお屋敷</td>
+                <td><a href="slides/pickup.pdf">pickup.pdf</td>
+                <td><a href="slides/pickup.pptx">pickup.pptx</td>
+              </tr>
+              <tr>
+                <td>Problem K: Cat Numbers!</td>
+                <td><a href="slides/catnum.pdf">catnum.pdf</td>
+                <td><a href="slides/catnum.pptx">catnum.pptx</td>
+              </tr>
+              <tr>
+                <td>Problem L: シャノワール</td>
+                <td><a href="slides/noir.pdf">noir.pdf</td>
+                <td><a href="slides/noir.pptx">noir.pptx</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>スタッフ</h2>
+          <p>東京大学プログラミングコンテスト2009 は以下のスタッフにより企画・運営されました．東京大学大学院情報理工学系研究科の院生，及びそのOBで構成されています．</p>
+          <ul>
+
+            <li>安達知也</li>
+            <li>北村裕太</li>
+            <li>小西祐介</li>
+            <li>高橋周平</li>
+            <li>前原貴憲</li>
+            <li>松本宜丈</li>
+            <li>山本和典</li>
+
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <!-- start footer -->
+
+      <hr>
+
+      <footer>
+        東京大学プログラミングコンテスト実行委員会
+      </footer>
+
+      <!-- end footer -->
+
+    </div><!-- .container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

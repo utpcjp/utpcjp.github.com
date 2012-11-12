@@ -1,221 +1,301 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-          "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ja">
+<!doctype html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <title>東京大学プログラミングコンテスト2010</title>
   </head>
   <body>
 
-    <h1>東京大学プログラミングコンテスト2010</h1>
-    <p>東京大学プログラミングコンテストの第3回目のコンテストである東京大学プログラミングコンテスト2010は2010年7月4日に開催されました．多数の方のご参加をいただき，誠にありがとうございました．</p>
+    <div class="container">
 
-    <h2>問題セット</h2>
-    <p>5時間のコンテストで以下の12問が出題されました．</p>
-    <ul>
-      <li><a href="problems/A.html">Problem A: 期末試験!</a></li>
-      <li><a href="problems/B.html">Problem B: 宝くじチェッカー</a></li>
-      <li><a href="problems/C.html">Problem C: コンパイル</a></li>
-      <li><a href="problems/D.html">Problem D: 無矛盾な単位系</a></li>
-      <li><a href="problems/E.html">Problem E: トーマス・ライトの憂鬱</a></li>
-      <li><a href="problems/F.html">Problem F: UTF-8</a></li>
-      <li><a href="problems/G.html">Proglem G: 天体観測</a></li>
-      <li><a href="problems/H.html">Problem H: 迷い猫、走った</a></li>
-      <li><a href="problems/I.html">Problem I: 盗まれた宝石</a></li>
-      <li><a href="problems/J.html">Problem J: 多項式の解の個数</a></li>
-      <li><a href="problems/K.html">Problem K: ワープホール</a></li>
-      <li><a href="problems/L.html">Problem L: 3つのシルエット</a></li>
-    </ul>
+      <!-- start header -->
 
-    <p>また，練習用の問題として下記の4問が出題されました．</p>
-    <ul>
-      <li><a href="problems/PA.html">Problem A: コンパス</a></li>
-      <li><a href="problems/PB.html">Problem B: 英作文</a></li>
-      <li><a href="problems/PC.html">Problem C: 円周率</a></li>
-      <li><a href="problems/PD.html">Problem D: P=NP</a></li>
-    </ul>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="/">utpc.jp</a>
+        </div>
+      </div>
 
-    <h2>データセット</h2>
-    <p>審判用に使われた入出力は以下の通りです（ファイルサイズが大きいものがありますのでご注意ください）．</p>
-    <table border="1">
-      <thead>
-	    <tr>
+      <div class="hero-unit">
+        <h1>UTPC 2010</h1>
+        <p>
+          東京大学プログラミングコンテスト2010<br>
+          July 4, 2010
+        </p>
+      </div>
 
-	      <th>問題</th>
-	      <th>入出力</th>
-	    </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Problem A: 期末試験!</td>
-          <td><a href="dataset/exam.zip">exam.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem B: 宝くじチェッカー</td>
-          <td><a href="dataset/lottery.zip">lottery.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem C: コンパイル</td>
-          <td><a href="dataset/compile.zip">compile.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem D: 無矛盾な単位系</td>
-          <td><a href="dataset/unit.zip">unit.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem E: トーマス・ライトの憂鬱</td>
-          <td><a href="dataset/parity.zip">parity.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem F: UTF-8</td>
-          <td><a href="dataset/utf8.zip">utf8.zip</a></td>
-        </tr>
-        <tr>
-          <td>Proglem G: 天体観測</td>
-          <td><a href="dataset/stars.zip">stars.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem H: 迷い猫、走った</td>
-          <td><a href="dataset/mayoineko.zip">mayoineko.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem I: 盗まれた宝石</td>
-          <td><a href="dataset/maze.zip">maze.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem J: 多項式の解の個数</td>
-          <td><a href="dataset/poly.zip">poly.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem K: ワープホール</td>
-          <td><a href="dataset/warphole.zip">warphole.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem L: 三つのシルエット</td>
-          <td><a href="dataset/silhouette.zip">silhouette.zip</a></td>
-        </tr>
+      <!-- end header -->
 
-        <tr>
-          <td>Problem A': コンパス</td>
-          <td><a href="dataset/compass.zip">compass.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem B': 英作文</td>
-          <td><a href="dataset/english.zip">english.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem C': 円周率</td>
-          <td><a href="dataset/pi.zip">pi.zip</a></td>
-        </tr>
-        <tr>
-          <td>Problem D': P=NP</td>
-          <td><a href="dataset/pvsnp.zip">pvsnp.zip</a></td>
-        </tr>
+      <div class="row">
+        <div class="span12">
 
-      </tbody>
-    </table>
+          <p>東京大学プログラミングコンテストの第3回目のコンテストである東京大学プログラミングコンテスト2010は2010年7月4日に開催されました．多数の方のご参加をいただき，誠にありがとうございました．</p>
 
-    <p><a href="dataset/utpc2010.zip">上記のすべての入出力をまとめたZIPアーカイブ</a>もあります．</p>
+        </div><!-- .span12 -->
+      </div><!-- .row -->
 
-    <h2>問題文・入出力データの利用について</h2>
-    <p>上記の問題文および入出力データは東京大学プログラミングコンテスト実行委員会が作成したものです．これらの問題文とデータの使用・複製・改変等の利用は東京大学プログラミングコンテスト実行委員会の許可なく自由に行っていただいて構いません．ただし，利用によって生じる障害・損害の一切について当方では責任を負わないものとします．</p>
+      <div class="row">
+        <div class="span12">
 
-    <h2>結果</h2>
-    <p>1位は京都大学の關戸啓人さん，2位は東京大学教養学部理科一類の保坂和宏さん，3位は東京大学理学部情報科学科の秋葉拓哉さんでした．おめでとうございます．</p>
-    <p>結果の詳細については以下をご覧ください．</p>
+          <h2>問題セット</h2>
+          <p>5時間のコンテストで以下の12問が出題されました．</p>
+          <ul>
+            <li><a href="problems/A.html">Problem A: 期末試験!</a></li>
+            <li><a href="problems/B.html">Problem B: 宝くじチェッカー</a></li>
+            <li><a href="problems/C.html">Problem C: コンパイル</a></li>
+            <li><a href="problems/D.html">Problem D: 無矛盾な単位系</a></li>
+            <li><a href="problems/E.html">Problem E: トーマス・ライトの憂鬱</a></li>
+            <li><a href="problems/F.html">Problem F: UTF-8</a></li>
+            <li><a href="problems/G.html">Proglem G: 天体観測</a></li>
+            <li><a href="problems/H.html">Problem H: 迷い猫、走った</a></li>
+            <li><a href="problems/I.html">Problem I: 盗まれた宝石</a></li>
+            <li><a href="problems/J.html">Problem J: 多項式の解の個数</a></li>
+            <li><a href="problems/K.html">Problem K: ワープホール</a></li>
+            <li><a href="problems/L.html">Problem L: 3つのシルエット</a></li>
+          </ul>
 
-    <ul>
-      <li><a href="standings.html">最終順位表</a></li>
-      <li><a href="statistics.html">提出状況</a></li>
-    </ul>
+          <p>また，練習用の問題として下記の4問が出題されました．</p>
+          <ul>
+            <li><a href="problems/PA.html">Problem A: コンパス</a></li>
+            <li><a href="problems/PB.html">Problem B: 英作文</a></li>
+            <li><a href="problems/PC.html">Problem C: 円周率</a></li>
+            <li><a href="problems/PD.html">Problem D: P=NP</a></li>
+          </ul>
 
-    <h2>講評</h2>
-    <table border="1">
-      <thead>
+        </div><!-- .span12 -->
+      </div><!-- .row -->
 
-	    <tr>
-	      <th>問題</th>
-	      <th>講評 (PDF)</th>
-	    </tr>
-      </thead>
-      <tbody>
+      <div class="row">
+        <div class="span12">
 
-        <tr>
-          <td>Problem A: 期末試験!</td>
-          <td rowspan="4"><a href="slides/abcd.pdf">abcd.pdf</a></td>
-        </tr>
-        <tr>
-          <td>Problem B: 宝くじチェッカー</td>
-        </tr>
-        <tr>
-          <td>Problem C: コンパイル</td>
-        </tr>
-        <tr>
-          <td>Problem D: 無矛盾な単位系</td>
-        </tr>
-        <tr>
-          <td>Problem E: トーマス・ライトの憂鬱</td>
-          <td><a href="slides/parity.pdf">parity.pdf</a></td>
-        </tr>
-        <tr>
-          <td>Problem F: UTF-8</td>
-          <td><a href="slides/utf8.pdf">utf8.pdf</a></td>
-        </tr>
-        <tr>
-          <td>Proglem G: 天体観測</td>
-          <td><a href="slides/stars.pdf">stars.pdf</a></td>
-        </tr>
-        <tr>
-          <td>Problem H: 迷い猫、走った</td>
-          <td><a href="slides/mayoineko.pdf">mayoineko.pdf</a></td>
-        </tr>
-        <tr>
-          <td>Problem I: 盗まれた宝石</td>
-          <td><a href="slides/maze.pdf">maze.pdf</a></td>
-        </tr>
-        <tr>
-          <td>Problem J: 多項式の解の個数</td>
-          <td><a href="slides/poly.pdf">poly.pdf</a></td>
-        </tr>
-        <tr>
-          <td>Problem K: ワープホール</td>
-          <td><a href="slides/warphole.pdf">warphole.pdf</a></td>
-        </tr>
-        <tr>
-          <td>Problem L: 三つのシルエット</td>
-          <td><a href="slides/silhouette.pdf">silhouette.pdf</a></td>
-        </tr>
+          <h2>データセット</h2>
+          <p>審判用に使われた入出力は以下の通りです（ファイルサイズが大きいものがありますのでご注意ください）．</p>
+          <table border="1">
+            <thead>
+	            <tr>
 
-      </tbody>
-    </table>
+	              <th>問題</th>
+	              <th>入出力</th>
+	            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Problem A: 期末試験!</td>
+                <td><a href="dataset/exam.zip">exam.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem B: 宝くじチェッカー</td>
+                <td><a href="dataset/lottery.zip">lottery.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem C: コンパイル</td>
+                <td><a href="dataset/compile.zip">compile.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem D: 無矛盾な単位系</td>
+                <td><a href="dataset/unit.zip">unit.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem E: トーマス・ライトの憂鬱</td>
+                <td><a href="dataset/parity.zip">parity.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem F: UTF-8</td>
+                <td><a href="dataset/utf8.zip">utf8.zip</a></td>
+              </tr>
+              <tr>
+                <td>Proglem G: 天体観測</td>
+                <td><a href="dataset/stars.zip">stars.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem H: 迷い猫、走った</td>
+                <td><a href="dataset/mayoineko.zip">mayoineko.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem I: 盗まれた宝石</td>
+                <td><a href="dataset/maze.zip">maze.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem J: 多項式の解の個数</td>
+                <td><a href="dataset/poly.zip">poly.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem K: ワープホール</td>
+                <td><a href="dataset/warphole.zip">warphole.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem L: 三つのシルエット</td>
+                <td><a href="dataset/silhouette.zip">silhouette.zip</a></td>
+              </tr>
 
-    <h2>スタッフ</h2>
-    <p>東京大学プログラミングコンテスト2010 は以下のスタッフにより企画・運営されました．東京大学の学生，及びそのOBで構成されています．</p>
-    <ul>
+              <tr>
+                <td>Problem A': コンパス</td>
+                <td><a href="dataset/compass.zip">compass.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem B': 英作文</td>
+                <td><a href="dataset/english.zip">english.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem C': 円周率</td>
+                <td><a href="dataset/pi.zip">pi.zip</a></td>
+              </tr>
+              <tr>
+                <td>Problem D': P=NP</td>
+                <td><a href="dataset/pvsnp.zip">pvsnp.zip</a></td>
+              </tr>
 
-      <li>安達知也</li>
-      <li>岩田陽一</li>
-      <li>北川宜稔</li>
-      <li>北村裕太</li>
-      <li>小西祐介</li>
-      <li>高橋周平</li>
-      <li>坪坂正志</li>
-      <li>八森勉</li>
+            </tbody>
+          </table>
 
-    </ul>
+          <p><a href="dataset/utpc2010.zip">上記のすべての入出力をまとめたZIPアーカイブ</a>もあります．</p>
 
-    <h2>謝辞</h2>
-    <p>本コンテストの開催にあたり，以下の方々に多大なご協力を頂きました．この場を借りてお礼申し上げます．</p>
+        </div><!-- .span12 -->
+      </div><!-- .row -->
 
-    <ul>
-      <li>江本健斗様</li>
-      <li>金子知適様</li>
-      <li>黄隆裕様</li>
-      <li>埼玉大学 Maximum の皆様</li>
-    </ul>
+      <div class="row">
+        <div class="span12">
 
-    <hr>
-    <address>東京大学プログラミングコンテスト実行委員会</address>
+          <h2>問題文・入出力データの利用について</h2>
+          <p>上記の問題文および入出力データは東京大学プログラミングコンテスト実行委員会が作成したものです．これらの問題文とデータの使用・複製・改変等の利用は東京大学プログラミングコンテスト実行委員会の許可なく自由に行っていただいて構いません．ただし，利用によって生じる障害・損害の一切について当方では責任を負わないものとします．</p>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>結果</h2>
+          <p>1位は京都大学の關戸啓人さん，2位は東京大学教養学部理科一類の保坂和宏さん，3位は東京大学理学部情報科学科の秋葉拓哉さんでした．おめでとうございます．</p>
+          <p>結果の詳細については以下をご覧ください．</p>
+
+          <ul>
+            <li><a href="standings.html">最終順位表</a></li>
+            <li><a href="statistics.html">提出状況</a></li>
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>講評</h2>
+          <table border="1">
+            <thead>
+
+	            <tr>
+	              <th>問題</th>
+	              <th>講評 (PDF)</th>
+	            </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Problem A: 期末試験!</td>
+                <td rowspan="4"><a href="slides/abcd.pdf">abcd.pdf</a></td>
+              </tr>
+              <tr>
+                <td>Problem B: 宝くじチェッカー</td>
+              </tr>
+              <tr>
+                <td>Problem C: コンパイル</td>
+              </tr>
+              <tr>
+                <td>Problem D: 無矛盾な単位系</td>
+              </tr>
+              <tr>
+                <td>Problem E: トーマス・ライトの憂鬱</td>
+                <td><a href="slides/parity.pdf">parity.pdf</a></td>
+              </tr>
+              <tr>
+                <td>Problem F: UTF-8</td>
+                <td><a href="slides/utf8.pdf">utf8.pdf</a></td>
+              </tr>
+              <tr>
+                <td>Proglem G: 天体観測</td>
+                <td><a href="slides/stars.pdf">stars.pdf</a></td>
+              </tr>
+              <tr>
+                <td>Problem H: 迷い猫、走った</td>
+                <td><a href="slides/mayoineko.pdf">mayoineko.pdf</a></td>
+              </tr>
+              <tr>
+                <td>Problem I: 盗まれた宝石</td>
+                <td><a href="slides/maze.pdf">maze.pdf</a></td>
+              </tr>
+              <tr>
+                <td>Problem J: 多項式の解の個数</td>
+                <td><a href="slides/poly.pdf">poly.pdf</a></td>
+              </tr>
+              <tr>
+                <td>Problem K: ワープホール</td>
+                <td><a href="slides/warphole.pdf">warphole.pdf</a></td>
+              </tr>
+              <tr>
+                <td>Problem L: 三つのシルエット</td>
+                <td><a href="slides/silhouette.pdf">silhouette.pdf</a></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>スタッフ</h2>
+          <p>東京大学プログラミングコンテスト2010 は以下のスタッフにより企画・運営されました．東京大学の学生，及びそのOBで構成されています．</p>
+          <ul>
+
+            <li>安達知也</li>
+            <li>岩田陽一</li>
+            <li>北川宜稔</li>
+            <li>北村裕太</li>
+            <li>小西祐介</li>
+            <li>高橋周平</li>
+            <li>坪坂正志</li>
+            <li>八森勉</li>
+
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>謝辞</h2>
+          <p>本コンテストの開催にあたり，以下の方々に多大なご協力を頂きました．この場を借りてお礼申し上げます．</p>
+
+          <ul>
+            <li>江本健斗様</li>
+            <li>金子知適様</li>
+            <li>黄隆裕様</li>
+            <li>埼玉大学 Maximum の皆様</li>
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <!-- start footer -->
+
+      <hr>
+
+      <footer>
+        東京大学プログラミングコンテスト実行委員会
+      </footer>
+
+      <!-- end footer -->
+
+    </div><!-- .container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

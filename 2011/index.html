@@ -1,132 +1,213 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ja">
+<!doctype html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <title>東京大学プログラミングコンテスト2011</title>
   </head>
   <body>
-    <h1>東京大学プログラミングコンテスト2011</h1>
-    <p>東京大学プログラミングコンテスト2011は2011年5月14日に開催されました．多数の方のご参加をいただき，誠にありがとうございました．</p>
 
-    <h2>問題セット</h2>
-    <p>5時間のコンテストで以下の12問が出題されました．</p>
-    <ul>
-      <li><a href="problems/jam.html">問題 A: プログラミングコンテスト</a></li>
-      <li><a href="problems/iwi.html">問題 B: (iwi)</a></li>
-      <li><a href="problems/iwi2.html">問題 C: [[iwi]]</a></li>
-      <li><a href="problems/defunge.html">問題 D: 停止問題</a></li>
-      <li><a href="problems/first_ac.html">問題 E: ファーストアクセプタンス</a></li>
-      <li><a href="problems/spanning.html">問題 F: 全域木</a></li>
-      <li><a href="problems/triangle.html">問題 G: プログラミングコンテストチャレンジブック</a></li>
-      <li><a href="problems/cache.html">問題 H: キャッシュ戦略</a></li>
-      <li><a href="problems/bit.html">問題 I: ビット演算</a></li>
-      <li><a href="problems/treap.html">問題 J: 乱択平衡分二分探索木</a></li>
-      <li><a href="problems/travel.html">問題 K: 巡回セールスマン問題</a></li>
-      <li><a href="problems/l_th.html">問題 L: <span style="font-size:110%;font-family:times new roman;"><i>L</i></span> 番目の数字</a></li>
-    </ul>
+    <div class="container">
 
-    <p>また，練習用の問題として下記の4問が出題されました．</p>
-    <ul>
-      <li><a href="problems_practice/easy.html">問題 A: Easy 問題</a></li>
-      <li><a href="problems_practice/medium.html">問題 B: Medium 問題</a></li>
-      <li><a href="problems_practice/hard.html">問題 C: Hard 問題</a></li>
-      <li><a href="problems_practice/challenge.html">問題 D: 撃墜フェーズ</a></li>
-    </ul>
+      <!-- start header -->
 
-    <h2>データセット</h2>
-    <p>審判用に使われた入力は以下の通りです（ファイルサイズが大きいのでご注意ください）．</p>
-    <ul>
-      <li><a href="dataset.zip">データセット</a></li>
-      <li><a href="dataset_practice.zip">プラクティスのデータセット</a></li>
-    </ul>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="/">utpc.jp</a>
+        </div>
+      </div>
 
-    <h2>問題文・入出力データの利用について</h2>
-    <p>上記の問題文および入出力データは東京大学プログラミングコンテスト実行委員会が作成したものです．これらの問題文とデータの使用・複製・改変等の利用は東京大学プログラミングコンテスト実行委員会の許可なく自由に行っていただいて構いません．ただし，利用によって生じる障害・損害の一切について当方では責任を負わないものとします．</p>
+      <div class="hero-unit">
+        <h1>UTPC 2011</h1>
+        <p>
+          東京大学プログラミングコンテスト2011<br>
+          May 14, 2011
+        </p>
+      </div>
 
-    <h2>結果</h2>
-    <p>1位は東京大学教養学部理科一類の副島真さん，2位は慶應義塾大学の高橋直大さん，3位は東京大学理学部情報科学科の岡圭吾さんでした．おめでとうございます．</p>
-    <p>結果の詳細については以下をご覧ください．</p>
-    <ul>
-      <li><a href="standings.html">最終順位表</a></li>
-      <!-- <li><a href="statistics.html">提出状況</a></li> -->
-    </ul>
+      <!-- end header -->
 
-    <h2>講評</h2>
-    <table border="1">
-      <thead>
-	<tr>
-	  <th>問題</th>
-	  <th>講評 (PDF)</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>問題 A: プログラミングコンテスト</td>
-	  <td><a href="slides/jam.pdf">jam.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 B: (iwi)</td>
-	  <td><a href="slides/iwi.pdf">iwi.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 C: [[iwi]]</td>
-	  <td><a href="slides/iwi2.pdf">iwi2.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 D: 停止問題</td>
-	  <td><a href="slides/defunge.pdf">defunge.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 E: ファーストアクセプタンス</td>
-	  <td><a href="slides/first_ac.pdf">first_ac.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 F: 全域木</td>
-	  <td><a href="slides/spanning.pdf">spanning.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 G: プログラミングコンテストチャレンジブック</td>
-	  <td><a href="slides/triangles.pdf">triangles.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 H: キャッシュ戦略</td>
-	  <td><a href="slides/cache.pdf">cache.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 I: ビット演算</td>
-	  <td><a href="slides/bit.pdf">bit.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 J: 乱択平衡分二分探索木</td>
-	  <td><a href="slides/treap.pdf">treap.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 K: 巡回セールスマン問題</td>
-	  <td><a href="slides/travel.pdf">travel.pdf</a></td>
-	</tr>
-	<tr>
-	  <td>問題 L: <span style="font-size:110%;font-family:times new roman;"><i>L</i></span> 番目の数字</td>
-	  <td><a href="slides/l_th.pdf">l_th.pdf</a></td>
-	</tr>
-      </tbody>
-    </table>
+      <div class="row">
+        <div class="span12">
 
-    <h2>スタッフ</h2>
-    <p>東京大学プログラミングコンテスト2011は以下のスタッフにより企画・運営されました．全員東京大学大学院に所属しています．</p>
-    <ul>
-      <li>秋葉拓哉</li>
-      <li>岩田陽一</li>
-      <li>北川宜稔</li>
-      <li>梁成基</li>
-      <li>山口洋</li>
-    </ul>
+          <p>東京大学プログラミングコンテスト2011は2011年5月14日に開催されました．多数の方のご参加をいただき，誠にありがとうございました．</p>
 
-    <h2>謝辞</h2>
-    <p>会場に関して，金子知適先生に協力していただきました．また，ジャッジシステムに関して，Atcoder を使用させていただきました．</p>
+        </div><!-- .span12 -->
+      </div><!-- .row -->
 
-    <hr>
-    <address>東京大学プログラミングコンテスト実行委員会</address>
+      <div class="row">
+        <div class="span12">
+
+          <h2>問題セット</h2>
+          <p>5時間のコンテストで以下の12問が出題されました．</p>
+          <ul>
+            <li><a href="problems/jam.html">問題 A: プログラミングコンテスト</a></li>
+            <li><a href="problems/iwi.html">問題 B: (iwi)</a></li>
+            <li><a href="problems/iwi2.html">問題 C: [[iwi]]</a></li>
+            <li><a href="problems/defunge.html">問題 D: 停止問題</a></li>
+            <li><a href="problems/first_ac.html">問題 E: ファーストアクセプタンス</a></li>
+            <li><a href="problems/spanning.html">問題 F: 全域木</a></li>
+            <li><a href="problems/triangle.html">問題 G: プログラミングコンテストチャレンジブック</a></li>
+            <li><a href="problems/cache.html">問題 H: キャッシュ戦略</a></li>
+            <li><a href="problems/bit.html">問題 I: ビット演算</a></li>
+            <li><a href="problems/treap.html">問題 J: 乱択平衡分二分探索木</a></li>
+            <li><a href="problems/travel.html">問題 K: 巡回セールスマン問題</a></li>
+            <li><a href="problems/l_th.html">問題 L: <span style="font-size:110%;font-family:times new roman;"><i>L</i></span> 番目の数字</a></li>
+          </ul>
+
+          <p>また，練習用の問題として下記の4問が出題されました．</p>
+          <ul>
+            <li><a href="problems_practice/easy.html">問題 A: Easy 問題</a></li>
+            <li><a href="problems_practice/medium.html">問題 B: Medium 問題</a></li>
+            <li><a href="problems_practice/hard.html">問題 C: Hard 問題</a></li>
+            <li><a href="problems_practice/challenge.html">問題 D: 撃墜フェーズ</a></li>
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>データセット</h2>
+          <p>審判用に使われた入力は以下の通りです（ファイルサイズが大きいのでご注意ください）．</p>
+          <ul>
+            <li><a href="dataset.zip">データセット</a></li>
+            <li><a href="dataset_practice.zip">プラクティスのデータセット</a></li>
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>問題文・入出力データの利用について</h2>
+          <p>上記の問題文および入出力データは東京大学プログラミングコンテスト実行委員会が作成したものです．これらの問題文とデータの使用・複製・改変等の利用は東京大学プログラミングコンテスト実行委員会の許可なく自由に行っていただいて構いません．ただし，利用によって生じる障害・損害の一切について当方では責任を負わないものとします．</p>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>結果</h2>
+          <p>1位は東京大学教養学部理科一類の副島真さん，2位は慶應義塾大学の高橋直大さん，3位は東京大学理学部情報科学科の岡圭吾さんでした．おめでとうございます．</p>
+          <p>結果の詳細については以下をご覧ください．</p>
+          <ul>
+            <li><a href="standings.html">最終順位表</a></li>
+            <!-- <li><a href="statistics.html">提出状況</a></li> -->
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>講評</h2>
+          <table border="1">
+            <thead>
+	            <tr>
+	              <th>問題</th>
+	              <th>講評 (PDF)</th>
+	            </tr>
+            </thead>
+            <tbody>
+	            <tr>
+	              <td>問題 A: プログラミングコンテスト</td>
+	              <td><a href="slides/jam.pdf">jam.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 B: (iwi)</td>
+	              <td><a href="slides/iwi.pdf">iwi.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 C: [[iwi]]</td>
+	              <td><a href="slides/iwi2.pdf">iwi2.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 D: 停止問題</td>
+	              <td><a href="slides/defunge.pdf">defunge.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 E: ファーストアクセプタンス</td>
+	              <td><a href="slides/first_ac.pdf">first_ac.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 F: 全域木</td>
+	              <td><a href="slides/spanning.pdf">spanning.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 G: プログラミングコンテストチャレンジブック</td>
+	              <td><a href="slides/triangles.pdf">triangles.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 H: キャッシュ戦略</td>
+	              <td><a href="slides/cache.pdf">cache.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 I: ビット演算</td>
+	              <td><a href="slides/bit.pdf">bit.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 J: 乱択平衡分二分探索木</td>
+	              <td><a href="slides/treap.pdf">treap.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 K: 巡回セールスマン問題</td>
+	              <td><a href="slides/travel.pdf">travel.pdf</a></td>
+	            </tr>
+	            <tr>
+	              <td>問題 L: <span style="font-size:110%;font-family:times new roman;"><i>L</i></span> 番目の数字</td>
+	              <td><a href="slides/l_th.pdf">l_th.pdf</a></td>
+	            </tr>
+            </tbody>
+          </table>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>スタッフ</h2>
+          <p>東京大学プログラミングコンテスト2011は以下のスタッフにより企画・運営されました．全員東京大学大学院に所属しています．</p>
+          <ul>
+            <li>秋葉拓哉</li>
+            <li>岩田陽一</li>
+            <li>北川宜稔</li>
+            <li>梁成基</li>
+            <li>山口洋</li>
+          </ul>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="span12">
+
+          <h2>謝辞</h2>
+          <p>会場に関して，金子知適先生に協力していただきました．また，ジャッジシステムに関して，Atcoder を使用させていただきました．</p>
+
+        </div><!-- .span12 -->
+      </div><!-- .row -->
+
+      <!-- start footer -->
+
+      <hr>
+
+      <footer>
+        東京大学プログラミングコンテスト実行委員会
+      </footer>
+
+      <!-- end footer -->
+
+    </div><!-- .container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
